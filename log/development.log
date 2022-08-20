@@ -454,3 +454,163 @@ Processing by JobSeekersController#index as */*
 Completed 200 OK in 37ms (Views: 24.1ms | ActiveRecord: 7.7ms | Allocations: 10116)
 
 
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-21 01:43:35 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.9ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.06ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 13.6ms | Allocations: 7788)
+
+
+  
+SyntaxError (/home/moringa/Documents/Flatiron/Rails/hired-api/app/models/profile.rb:14: syntax error, unexpected ',', expecting =>
+...ion/pdf', 'application/msword', message: 'is not a PDF/DOC' }
+...                              ^
+/home/moringa/Documents/Flatiron/Rails/hired-api/app/models/profile.rb:14: syntax error, unexpected '}', expecting `end'
+..., message: 'is not a PDF/DOC' }
+...                              ^
+):
+  
+app/models/profile.rb:14: syntax error, unexpected ',', expecting =>
+app/models/profile.rb:14: syntax error, unexpected '}', expecting `end'
+app/models/profile.rb:14: syntax error, unexpected ',', expecting =>
+app/models/profile.rb:14: syntax error, unexpected '}', expecting `end'
+app/controllers/job_seekers_controller.rb:7:in `index'
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-21 01:44:06 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.4ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.91ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 8.9ms | Allocations: 5427)
+
+
+  
+SyntaxError (/home/moringa/Documents/Flatiron/Rails/hired-api/app/models/profile.rb:14: syntax error, unexpected ',', expecting =>
+...ion/pdf', 'application/msword', message: 'is not a PDF or DO...
+...                              ^
+/home/moringa/Documents/Flatiron/Rails/hired-api/app/models/profile.rb:14: syntax error, unexpected '}', expecting `end'
+...essage: 'is not a PDF or DOC' }
+...                              ^
+):
+  
+app/models/profile.rb:14: syntax error, unexpected ',', expecting =>
+app/models/profile.rb:14: syntax error, unexpected '}', expecting `end'
+app/models/profile.rb:14: syntax error, unexpected ',', expecting =>
+app/models/profile.rb:14: syntax error, unexpected '}', expecting `end'
+app/controllers/job_seekers_controller.rb:7:in `index'
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-21 01:45:06 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.57ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 3.8ms | Allocations: 5402)
+
+
+  
+SyntaxError (/home/moringa/Documents/Flatiron/Rails/hired-api/app/models/profile.rb:14: syntax error, unexpected ',', expecting =>
+...ion/pdf', 'application/msword', message: 'is not a PDF' }
+...                              ^
+/home/moringa/Documents/Flatiron/Rails/hired-api/app/models/profile.rb:14: syntax error, unexpected '}', expecting `end'
+...ord', message: 'is not a PDF' }
+...                              ^
+):
+  
+app/models/profile.rb:14: syntax error, unexpected ',', expecting =>
+app/models/profile.rb:14: syntax error, unexpected '}', expecting `end'
+app/models/profile.rb:14: syntax error, unexpected ',', expecting =>
+app/models/profile.rb:14: syntax error, unexpected '}', expecting `end'
+app/controllers/job_seekers_controller.rb:7:in `index'
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-21 01:45:32 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.39ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 3.6ms | Allocations: 10498)
+
+
+  
+ArgumentError (Unknown validator: 'AttachedValidator'):
+  
+app/models/profile.rb:10:in `<class:Profile>'
+app/models/profile.rb:1:in `<top (required)>'
+app/controllers/job_seekers_controller.rb:7:in `index'
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-21 01:47:03 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.7ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.14ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.7ms | Allocations: 5627)
+
+
+  
+ArgumentError (Unknown validator: 'AttachedValidator'):
+  
+app/models/profile.rb:10:in `<class:Profile>'
+app/models/profile.rb:1:in `<top (required)>'
+app/controllers/job_seekers_controller.rb:7:in `index'
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-21 01:48:05 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.5ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.47ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms | Allocations: 5627)
+
+
+  
+ArgumentError (Unknown validator: 'AttachedValidator'):
+  
+app/models/profile.rb:10:in `<class:Profile>'
+app/models/profile.rb:1:in `<top (required)>'
+app/controllers/job_seekers_controller.rb:7:in `index'
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-21 01:49:45 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.5ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.76ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 4.3ms | Allocations: 10406)
+
+
+  
+ArgumentError (Unknown validator: 'AttachedValidator'):
+  
+app/models/profile.rb:10:in `<class:Profile>'
+app/models/profile.rb:1:in `<top (required)>'
+app/controllers/job_seekers_controller.rb:7:in `index'
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-21 01:50:10 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (20.82ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 3.4ms | Allocations: 10421)
+
+
+  
+ArgumentError (Unknown validator: 'AttachedValidator'):
+  
+app/models/profile.rb:10:in `<class:Profile>'
+app/models/profile.rb:1:in `<top (required)>'
+app/controllers/job_seekers_controller.rb:7:in `index'
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-21 01:50:39 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.2ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 3.4ms | Allocations: 10404)
+
+
+  
+ArgumentError (Unknown validator: 'AttachedValidator'):
+  
+app/models/profile.rb:14:in `<class:Profile>'
+app/models/profile.rb:1:in `<top (required)>'
+app/controllers/job_seekers_controller.rb:7:in `index'
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-21 01:50:51 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.4ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mProfile Load (0.9ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."job_seeker_id" = $1 LIMIT $2[0m  [["job_seeker_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (21.1ms)
+Completed 200 OK in 39ms (Views: 26.4ms | ActiveRecord: 6.0ms | Allocations: 12191)
+
+
