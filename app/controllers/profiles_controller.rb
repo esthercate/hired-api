@@ -12,6 +12,12 @@ class ProfilesController < ApplicationController
     render json: profile, status: :ok
   end
 
+  def update
+    profile = Profile.find(params[:id])
+    profile.update(update_params)
+    render json: profile, status: :ok
+  end
+
 
 
 
@@ -24,4 +30,9 @@ class ProfilesController < ApplicationController
   def profile_params
     params.permit(:about_me, :description, :job_seeker_id, :experience_years, :salary_expectation, :file)
   end
+
+  def update_params
+    params.permit(:about_me, :description, :job_seeker_id, :experience_years, :salary_expectation)
+  end
+
 end
