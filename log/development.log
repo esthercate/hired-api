@@ -295,3 +295,60 @@ Processing by JobSeekersController#index as HTML
 Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 829)
 
 
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-20 22:30:51 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.8ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+Completed 200 OK in 22ms (Views: 6.3ms | ActiveRecord: 6.7ms | Allocations: 7219)
+
+
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-20 22:30:55 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.5ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 829)
+
+
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-20 22:30:58 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 829)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-20 22:30:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2022-08-20 22:31:44 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.4ms | Allocations: 619)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 3294)
+
+
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-20 22:31:52 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.9ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.79ms)
+Completed 200 OK in 45ms (Views: 26.4ms | ActiveRecord: 7.0ms | Allocations: 12812)
+
+
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-20 22:33:38 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.5ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.81ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 1015)
+
+
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-20 22:33:39 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.5ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.64ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 996)
+
+

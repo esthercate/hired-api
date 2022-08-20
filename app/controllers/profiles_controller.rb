@@ -7,7 +7,12 @@ class ProfilesController < ApplicationController
     render json: profile, status: :accepted
   end
 
-  
+  def show
+    profile = Profile.find(params[:id])
+    render json: profile, status: :ok
+  end
+
+
 
 
   private
