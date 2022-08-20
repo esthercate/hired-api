@@ -191,3 +191,107 @@ FOREIGN KEY ("blob_id")
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(7855018080824880525)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7855018080824880525)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProfiles (20220820174935)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "profiles" ("id" bigserial primary key, "about_me" character varying, "description" character varying, "job_seeker_id" integer, "experience_years" integer, "salary_expectation" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220820174935"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7855018080824880525)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-08-20 22:06:07 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.1ms | Allocations: 619)
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 3294)
+
+
+Started GET "/job_seeker" for 127.0.0.1 at 2022-08-20 22:06:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/job_seeker"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-20 22:06:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-20 22:06:34 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.7ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+Completed 200 OK in 13ms (Views: 1.7ms | ActiveRecord: 2.2ms | Allocations: 3838)
+
+
+Started POST "/job_seekers" for 127.0.0.1 at 2022-08-20 22:15:11 +0300
+Processing by JobSeekersController#create as */*
+  Parameters: {"first_name"=>"Samuel", "last_name"=>"Hinga", "user_name"=>"badeh", "email"=>"samuelhinga420@gmail.com", "phone_number"=>"0710361878", "password"=>"[FILTERED]", "role"=>"Job seeker", "admin_id"=>1, "employer_id"=>nil}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "badeh"], ["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "samuelhinga420@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" = $1 LIMIT $2[0m  [["phone_number", 710361878], ["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 302ms (Views: 1.8ms | ActiveRecord: 10.3ms | Allocations: 18990)
+
+
+Started POST "/job_seekers" for 127.0.0.1 at 2022-08-20 22:15:51 +0300
+Processing by JobSeekersController#create as */*
+  Parameters: {"first_name"=>"Samuel", "last_name"=>"Hinga", "user_name"=>"badeh", "email"=>"samuelhinga420@gmail.com", "phone_number"=>"0710361878", "password"=>"[FILTERED]", "role"=>"Job seeker", "admin_id"=>1, "employer_id"=>nil}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "badeh"], ["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "samuelhinga420@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" = $1 LIMIT $2[0m  [["phone_number", 710361878], ["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+Completed 422 Unprocessable Entity in 288ms (Views: 1.1ms | ActiveRecord: 5.9ms | Allocations: 9181)
+
+
+Started POST "/job_seekers" for 127.0.0.1 at 2022-08-20 22:16:38 +0300
+Processing by JobSeekersController#create as */*
+  Parameters: {"first_name"=>"Samuel", "last_name"=>"Hinga", "user_name"=>"badeh", "email"=>"samuelhinga420@gmail.com", "phone_number"=>"0710361878", "password"=>"[FILTERED]", "role"=>"Job seeker", "admin_id"=>1, "employer_id"=>nil}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "badeh"], ["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "samuelhinga420@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" = $1 LIMIT $2[0m  [["phone_number", 710361878], ["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Create (1.0ms)[0m  [1m[32mINSERT INTO "job_seekers" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "role", "admin_id", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Samuel"], ["last_name", "Hinga"], ["user_name", "badeh"], ["email", "samuelhinga420@gmail.com"], ["phone_number", 710361878], ["password_digest", "[FILTERED]"], ["role", "Job seeker"], ["admin_id", 1], ["employer_id", nil], ["created_at", "2022-08-20 19:16:38.640456"], ["updated_at", "2022-08-20 19:16:38.640456"]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+Completed 202 Accepted in 280ms (Views: 0.5ms | ActiveRecord: 8.2ms | Allocations: 8563)
+
+
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-20 22:16:56 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.6ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms | Allocations: 889)
+
+
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-20 22:17:13 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.6ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.6ms | Allocations: 829)
+
+
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-20 22:17:16 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.4ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 829)
+
+
