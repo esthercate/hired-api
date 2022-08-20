@@ -3,7 +3,7 @@ class ProfilesController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
   def create
-    profile = Profile.create(profile_params)
+    profile = Profile.create!(profile_params)
     render json: profile, status: :accepted
   end
 
@@ -28,11 +28,11 @@ class ProfilesController < ApplicationController
   end
 
   def profile_params
-    params.permit(:about_me, :description, :job_seeker_id, :experience_years, :salary_expectation, :file)
+    params.permit(:about_me, :description, :job_seeker_id, :experience_years, :salary_expectation, :image, :resume)
   end
 
   def update_params
-    params.permit(:about_me, :description, :job_seeker_id, :experience_years, :salary_expectation)
+    params.permit(:about_me, :description, :job_seeker_id, :experience_years, :salary_expectation, :image, :resume)
   end
 
 end
