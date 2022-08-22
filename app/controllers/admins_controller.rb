@@ -15,7 +15,7 @@ class AdminsController < ApplicationController
     private 
 
     def admin_params
-        params.permit(:first_name, :last_name, :email, :role)
+        params.permit(:first_name, :last_name, :email, :role, :password)
     end
 
     def render_unprocessable_entity(invalid)
