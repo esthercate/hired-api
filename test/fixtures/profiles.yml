@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  about_me: MyString
+  description: MyString
+  job_seeker_id: 1
+  experience_years: 1
+  salary_expectation: 1
+
+two:
+  about_me: MyString
+  description: MyString
+  job_seeker_id: 1
+  experience_years: 1
+  salary_expectation: 1

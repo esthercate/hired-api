@@ -14,7 +14,13 @@ gem "puma", "~> 5.0"
 
 gem "bcrypt"
 
+<<<<<<< HEAD
 gem "active_model_serializers"
+=======
+gem 'active_model_serializers'
+
+# gem 'active_storage_validations'
+>>>>>>> hinga
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
@@ -29,6 +35,6 @@ end
 
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
+  gem "spring"
 end
 
