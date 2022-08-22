@@ -152,6 +152,7 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 27ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 3321)
 
 
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2022-08-21 20:07:28 +0300
   
 ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
@@ -581,5 +582,65 @@ Processing by Rails::WelcomeController#index as HTML
   Rendering /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
   Rendered /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.5ms | Allocations: 623)
 Completed 200 OK in 40ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 3324)
+=======
+  [1m[35m (50.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (41.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7855018080824880525)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAdmins (20220821172343)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (33.6ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "role" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220821172343"]]
+  [1m[36mTRANSACTION (40.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEmployers (20220821172924)
+  [1m[36mTRANSACTION (68.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (67.7ms)[0m  [1m[35mCREATE TABLE "employers" ("id" bigserial primary key, "user_name" character varying, "email" character varying, "phone_number" integer, "password_digest" character varying, "role" character varying, "subscription" boolean, "company_name" character varying, "first_name" character varying, "last_name" character varying, "admin_id" integer, "employer" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220821172924"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-08-21 17:39:57.762275"], ["updated_at", "2022-08-21 17:39:57.762275"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(7855018080824880525)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-08-22 10:09:42 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.0ms | Allocations: 623)
+Completed 200 OK in 27ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 3321)
+
+
+Started GET "/admins" for 127.0.0.1 at 2022-08-22 10:09:58 +0300
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (44.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.14ms)
+Completed 200 OK in 94ms (Views: 25.2ms | ActiveRecord: 44.0ms | Allocations: 4804)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-22 10:09:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/employers" for 127.0.0.1 at 2022-08-22 10:10:11 +0300
+Processing by EmployersController#index as HTML
+  [1m[36mEmployer Load (42.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 87ms (Views: 4.7ms | ActiveRecord: 42.3ms | Allocations: 2968)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-08-22 10:16:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/admins" for 127.0.0.1 at 2022-08-22 10:17:05 +0300
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 98ms (Views: 97.5ms | ActiveRecord: 12.5ms | Allocations: 3747)
+>>>>>>> catherine
 
 
