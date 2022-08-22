@@ -10,24 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2022_08_21_172924) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "admins", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.string "password_digest"
-    t.string "role"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "employers", force: :cascade do |t|
-=======
-ActiveRecord::Schema[7.0].define(version: 2022_08_20_174935) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -59,32 +42,46 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_20_174935) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "job_seekers", force: :cascade do |t|
+  create_table "admins", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
->>>>>>> hinga
+    t.string "email"
+    t.string "password_digest"
+    t.string "role"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "employers", force: :cascade do |t|
     t.string "user_name"
     t.string "email"
     t.integer "phone_number"
     t.string "password_digest"
     t.string "role"
-<<<<<<< HEAD
     t.boolean "subscription"
     t.string "company_name"
     t.string "first_name"
     t.string "last_name"
     t.integer "admin_id"
     t.string "employer"
-=======
-    t.integer "admin_id"
-    t.integer "employer_id"
->>>>>>> hinga
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-<<<<<<< HEAD
-=======
+  create_table "job_seekers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "user_name"
+    t.string "email"
+    t.integer "phone_number"
+    t.string "password_digest"
+    t.string "role"
+    t.integer "admin_id"
+    t.integer "employer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "profiles", force: :cascade do |t|
     t.string "about_me"
     t.string "description"
@@ -97,5 +94,4 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_20_174935) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
->>>>>>> hinga
 end
