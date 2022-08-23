@@ -1724,3 +1724,140 @@ Processing by SessionsController#create as */*
 Completed 201 Created in 268ms (Views: 2.9ms | ActiveRecord: 0.7ms | Allocations: 2214)
 
 
+Started GET "/" for 127.0.0.1 at 2022-08-23 12:19:43 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.1ms | Allocations: 626)
+Completed 200 OK in 37ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 3342)
+
+
+Started GET "/admins" for 127.0.0.1 at 2022-08-23 12:19:46 +0300
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (44.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mEmployer Load (73.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."admin_id" = $1[0m  [["admin_id", 1]]
+[active_model_serializers]   ↳ app/controllers/admins_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mEmployer Load (0.9ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."admin_id" = $1[0m  [["admin_id", 2]]
+[active_model_serializers]   ↳ app/controllers/admins_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."admin_id" = $1[0m  [["admin_id", 3]]
+[active_model_serializers]   ↳ app/controllers/admins_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (184.88ms)
+Completed 200 OK in 353ms (Views: 201.9ms | ActiveRecord: 134.3ms | Allocations: 24648)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-23 12:19:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-08-23 12:20:38 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"kaate@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"kaate@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (1.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kaate@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15:in `create'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "kaate@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:17:in `create'
+  [1m[36mEmployer Load (0.2ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:17:in `create'
+  [1m[36mJobSeeker Load (33.6ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "kaate@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+  [1m[36mJobSeeker Load (18.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.34ms)
+Completed 401 Unauthorized in 146ms (Views: 6.1ms | ActiveRecord: 67.1ms | Allocations: 5592)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-08-23 12:21:34 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"kaate@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"kaate@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (12.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kaate@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15:in `create'
+  [1m[36mEmployer Load (97.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "kaate@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:17:in `create'
+  [1m[36mEmployer Load (80.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:17:in `create'
+  [1m[36mJobSeeker Load (1.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "kaate@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+  [1m[36mJobSeeker Load (11.0ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 217ms (Views: 0.6ms | ActiveRecord: 202.4ms | Allocations: 2683)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-08-23 12:22:17 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"kaate@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"kaate@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kaate@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15:in `create'
+  [1m[36mEmployer Load (33.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "kaate@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:17:in `create'
+  [1m[36mEmployer Load (28.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:17:in `create'
+  [1m[36mJobSeeker Load (79.7ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "kaate@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+  [1m[36mJobSeeker Load (2.7ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 219ms (Views: 1.8ms | ActiveRecord: 144.5ms | Allocations: 2699)
+
+
+Started GET "/admins" for 127.0.0.1 at 2022-08-23 12:22:25 +0300
+Processing by AdminsController#index as */*
+  Parameters: {"email"=>"kaate@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mEmployer Load (82.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."admin_id" = $1[0m  [["admin_id", 1]]
+[active_model_serializers]   ↳ app/controllers/admins_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mEmployer Load (4.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."admin_id" = $1[0m  [["admin_id", 2]]
+[active_model_serializers]   ↳ app/controllers/admins_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mEmployer Load (0.9ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."admin_id" = $1[0m  [["admin_id", 3]]
+[active_model_serializers]   ↳ app/controllers/admins_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (114.37ms)
+Completed 200 OK in 120ms (Views: 31.7ms | ActiveRecord: 88.2ms | Allocations: 4165)
+
+
+Started GET "/admins" for 127.0.0.1 at 2022-08-23 12:22:38 +0300
+Processing by AdminsController#index as */*
+  Parameters: {"email"=>"kaate@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mAdmin Load (99.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mEmployer Load (11.8ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."admin_id" = $1[0m  [["admin_id", 1]]
+[active_model_serializers]   ↳ app/controllers/admins_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."admin_id" = $1[0m  [["admin_id", 2]]
+[active_model_serializers]   ↳ app/controllers/admins_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."admin_id" = $1[0m  [["admin_id", 3]]
+[active_model_serializers]   ↳ app/controllers/admins_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (35.11ms)
+Completed 200 OK in 151ms (Views: 37.8ms | ActiveRecord: 112.8ms | Allocations: 4144)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-08-23 12:22:50 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"kaate@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"kaate@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (3.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kaate@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15:in `create'
+  [1m[36mEmployer Load (14.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "kaate@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:17:in `create'
+  [1m[36mEmployer Load (82.2ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:17:in `create'
+  [1m[36mJobSeeker Load (0.5ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "kaate@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+  [1m[36mJobSeeker Load (1.0ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 118ms (Views: 2.5ms | ActiveRecord: 101.3ms | Allocations: 2702)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-08-23 12:25:24 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"kaate@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"kaate@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (142.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kaate@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15:in `create'
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kaate@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:16:in `create'
+[active_model_serializers]   [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."admin_id" = $1[0m  [["admin_id", 3]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:25:in `create'
+[active_model_serializers] Rendered AdminSerializer with ActiveModelSerializers::Adapter::Attributes (15.23ms)
+Completed 201 Created in 680ms (Views: 15.4ms | ActiveRecord: 177.9ms | Allocations: 8297)
+
+
