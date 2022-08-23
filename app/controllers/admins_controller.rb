@@ -7,6 +7,16 @@ class AdminsController < ApplicationController
         render json: admins
     end
 
+    def show 
+        admin = Admin.find_by(id: session[:admin_id])
+        if admin
+            render json: admin, status: :created
+        else
+            render json: "Not authorised", status: :unauthorized
+        end
+    end
+   
+
     def create 
         admin = Admin.create!(admin_params)
         render json: admin, status: :created
