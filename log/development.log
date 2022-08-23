@@ -1259,6 +1259,7 @@ Processing by JobSeekersController#index as HTML
 Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.6ms | Allocations: 1910)
 
 
+<<<<<<< HEAD
 Started GET "/job_seekers" for 127.0.0.1 at 2022-08-22 12:58:26 +0300
   [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by JobSeekersController#index as HTML
@@ -1272,5 +1273,125 @@ Processing by JobSeekersController#index as HTML
 [active_model_serializers]   ↳ app/controllers/job_seekers_controller.rb:7:in `index'
 [active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (42.27ms)
 Completed 200 OK in 159ms (Views: 91.7ms | ActiveRecord: 10.4ms | Allocations: 43729)
+=======
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-23 09:38:21 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobSeekersController#index as */*
+  Parameters: {"first_name"=>"Samuel", "last_name"=>"Hinga", "user_name"=>"badeh", "email"=>"samuelhinga420@gmail.com", "phone_number"=>"0710361878", "password"=>"[FILTERED]", "role"=>"Job seeker", "admin_id"=>1, "employer_id"=>nil}
+  [1m[36mJobSeeker Load (1.6ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."job_seeker_id" = $1 LIMIT $2[0m  [["job_seeker_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (31.53ms)
+Completed 200 OK in 98ms (Views: 58.5ms | ActiveRecord: 11.6ms | Allocations: 41305)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-08-23 09:39:56 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"user_name"=>"badeh", "password"=>"[FILTERED]", "role"=>"job seeker", "session"=>{"user_name"=>"badeh", "password"=>"[FILTERED]", "role"=>"job seeker"}}
+  [1m[36mJobSeeker Load (0.4ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+  [1m[36mJobSeeker Load (0.2ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 9ms (Views: 3.0ms | ActiveRecord: 0.6ms | Allocations: 1696)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-08-23 09:40:44 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"samuelhinga420@gmail.com", "password"=>"[FILTERED]", "role"=>"job seeker", "session"=>{"email"=>"samuelhinga420@gmail.com", "password"=>"[FILTERED]", "role"=>"job seeker"}}
+  [1m[36mJobSeeker Load (0.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "samuelhinga420@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 264ms (ActiveRecord: 0.3ms | Allocations: 2539)
+
+
+  
+NameError (undefined local variable or method `sessions' for #<SessionsController:0x00000000006568>
+Did you mean?  session):
+  
+app/controllers/sessions_controller.rb:17:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-08-23 09:42:37 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"samuelhinga420@gmail.com", "password"=>"[FILTERED]", "role"=>"job seeker", "session"=>{"email"=>"samuelhinga420@gmail.com", "password"=>"[FILTERED]", "role"=>"job seeker"}}
+  [1m[36mJobSeeker Load (0.7ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "samuelhinga420@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+[active_model_serializers]   [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."job_seeker_id" = $1 LIMIT $2[0m  [["job_seeker_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `create'
+[active_model_serializers] Rendered JobSeekerSerializer with ActiveModelSerializers::Adapter::Attributes (13.66ms)
+Completed 201 Created in 302ms (Views: 13.7ms | ActiveRecord: 7.1ms | Allocations: 12093)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-08-23 09:43:43 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"user_name"=>"badeh", "password"=>"[FILTERED]", "role"=>"job seeker", "session"=>{"user_name"=>"badeh", "password"=>"[FILTERED]", "role"=>"job seeker"}}
+  [1m[36mJobSeeker Load (0.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+  [1m[36mJobSeeker Load (0.5ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 7ms (Views: 0.9ms | ActiveRecord: 0.9ms | Allocations: 1447)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-23 09:43:52 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-23 09:43:53 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.6ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."job_seeker_id" = $1 LIMIT $2[0m  [["job_seeker_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.32ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.9ms | Allocations: 1910)
+
+
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-23 09:43:58 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.4ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."job_seeker_id" = $1 LIMIT $2[0m  [["job_seeker_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.82ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.6ms | Allocations: 1893)
+
+
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-23 09:44:00 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.4ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."job_seeker_id" = $1 LIMIT $2[0m  [["job_seeker_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.9ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 1.0ms | Allocations: 1892)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-23 09:44:00 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-08-23 09:44:27 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"user_name"=>"badeh", "password"=>"[FILTERED]", "role"=>"job seeker", "session"=>{"user_name"=>"badeh", "password"=>"[FILTERED]", "role"=>"job seeker"}}
+  [1m[36mJobSeeker Load (0.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+  [1m[36mJobSeeker Load (0.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "badeh"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+[active_model_serializers]   [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."job_seeker_id" = $1 LIMIT $2[0m  [["job_seeker_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `create'
+[active_model_serializers] Rendered JobSeekerSerializer with ActiveModelSerializers::Adapter::Attributes (13.37ms)
+Completed 201 Created in 309ms (Views: 13.5ms | ActiveRecord: 6.9ms | Allocations: 12723)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-08-23 09:46:19 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"samuelhinga420@gmail.com", "password"=>"[FILTERED]", "role"=>"job seeker", "session"=>{"email"=>"samuelhinga420@gmail.com", "password"=>"[FILTERED]", "role"=>"job seeker"}}
+  [1m[36mJobSeeker Load (0.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "samuelhinga420@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+[active_model_serializers]   [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."job_seeker_id" = $1 LIMIT $2[0m  [["job_seeker_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:18:in `create'
+[active_model_serializers] Rendered JobSeekerSerializer with ActiveModelSerializers::Adapter::Attributes (14.64ms)
+Completed 201 Created in 305ms (Views: 14.5ms | ActiveRecord: 8.3ms | Allocations: 12132)
+>>>>>>> hinga
 
 
