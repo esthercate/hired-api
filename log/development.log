@@ -2039,3 +2039,72 @@ Processing by JobSeekersController#create as */*
 Completed 202 Accepted in 414ms (Views: 19.9ms | ActiveRecord: 22.2ms | Allocations: 14908)
 
 
+Started POST "/admins" for 127.0.0.1 at 2022-08-23 13:55:07 +0300
+Processing by AdminsController#create as */*
+  Parameters: {"first_name"=>"kuria", "last_name"=>"kush", "user_name"=>"sammie", "email"=>"kush@gmail.com", "password"=>"[FILTERED]"}
+[31mUnpermitted parameter: :user_name. Context: { controller: AdminsController, action: create, request: #<ActionDispatch::Request:0x00007f96601dc4e8>, params: {"first_name"=>"kuria", "last_name"=>"kush", "user_name"=>"sammie", "email"=>"kush@gmail.com", "password"=>"[FILTERED]", "controller"=>"admins", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admins_controller.rb:11:in `create'
+  [1m[36mAdmin Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kush@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admins_controller.rb:11:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.74ms)
+Completed 422 Unprocessable Entity in 469ms (Views: 1.4ms | ActiveRecord: 72.7ms | Allocations: 9684)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-08-23 13:55:36 +0300
+Processing by AdminsController#create as */*
+  Parameters: {"first_name"=>"kuria", "last_name"=>"kush", "user_name"=>"sammie", "email"=>"kush@gmail.com", "password"=>"[FILTERED]", "role"=>"admin"}
+[31mUnpermitted parameter: :user_name. Context: { controller: AdminsController, action: create, request: #<ActionDispatch::Request:0x00007f966014f0e8>, params: {"first_name"=>"kuria", "last_name"=>"kush", "user_name"=>"sammie", "email"=>"kush@gmail.com", "password"=>"[FILTERED]", "role"=>"admin", "controller"=>"admins", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admins_controller.rb:11:in `create'
+  [1m[36mAdmin Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kush@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:11:in `create'
+  [1m[36mAdmin Create (5.5ms)[0m  [1m[32mINSERT INTO "admins" ("first_name", "last_name", "email", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "kuria"], ["last_name", "kush"], ["email", "kush@gmail.com"], ["password_digest", "[FILTERED]"], ["role", "admin"], ["created_at", "2022-08-23 10:55:36.840101"], ["updated_at", "2022-08-23 10:55:36.840101"]]
+  ↳ app/controllers/admins_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admins_controller.rb:11:in `create'
+[active_model_serializers]   [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."admin_id" = $1[0m  [["admin_id", 4]]
+[active_model_serializers]   ↳ app/controllers/admins_controller.rb:12:in `create'
+[active_model_serializers] Rendered AdminSerializer with ActiveModelSerializers::Adapter::Attributes (21.88ms)
+Completed 201 Created in 510ms (Views: 25.3ms | ActiveRecord: 15.9ms | Allocations: 6725)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-08-23 13:56:02 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"kush@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"kush@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kush@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms | Allocations: 1855)
+
+
+  
+NoMethodError (undefined method `authenticate' for "kush@gmail.com":String):
+  
+app/controllers/sessions_controller.rb:23:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-08-23 13:56:41 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"kush@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"kush@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kush@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms | Allocations: 1732)
+
+
+  
+NoMethodError (undefined method `authenticate' for "kush@gmail.com":String):
+  
+app/controllers/sessions_controller.rb:23:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-08-23 13:57:46 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"kush@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"kush@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kush@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15:in `create'
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kush@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:16:in `create'
+[active_model_serializers]   [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."admin_id" = $1[0m  [["admin_id", 4]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:25:in `create'
+[active_model_serializers] Rendered AdminSerializer with ActiveModelSerializers::Adapter::Attributes (12.29ms)
+Completed 201 Created in 381ms (Views: 12.0ms | ActiveRecord: 13.9ms | Allocations: 8333)
+
+
