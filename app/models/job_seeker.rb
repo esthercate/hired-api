@@ -3,6 +3,8 @@ class JobSeeker < ApplicationRecord
 
   has_one :profile, dependent: :destroy
 
+  belongs_to :employer
+
   validates :first_name, :last_name, presence: true
   validates :user_name, :email, uniqueness: true
   validates :password, length: {in: 6..20}
