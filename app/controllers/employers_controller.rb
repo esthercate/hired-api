@@ -1,4 +1,6 @@
 class EmployersController < ApplicationController
+    wrap_parameters format: []
+    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
     def index 
         employers = Employer.all 
@@ -12,7 +14,11 @@ class EmployersController < ApplicationController
 
     private 
 
+    def render_unprocessable_entity(invalid)
+        render json:{error: invalid.record.errors}, status: :unprocessable_entity
+    end
+
     def employer_params 
-        params.permit(:user_name, :email, :phone_number, :role, :subscription, :company_name, :first_name, :last_name, :admin_id, :employer)
+        params.permit(:user_name, :email, :phone_number, :role, :subscription, :company_name, :first_name, :last_name, :password, :admin_id)
     end
 end

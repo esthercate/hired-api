@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :employers
-  resources :admins
+  resources :employers, only: [:create, :index, :show]
+  resources :admins, only:[:create, :index, :show]
 
   resources :profiles, only: [:create, :show, :update]
   resources :job_seekers, only: [:show, :create, :index, :destroy]
