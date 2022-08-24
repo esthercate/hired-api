@@ -2229,3 +2229,157 @@ Processing by JobSeekersController#create as */*
 Completed 202 Accepted in 428ms (Views: 81.2ms | ActiveRecord: 19.7ms | Allocations: 18474)
 
 
+Started POST "/employers" for 127.0.0.1 at 2022-08-24 15:15:48 +0300
+  
+SyntaxError (/Users/esther/Public/hired-api/app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+...  validates :role, :user_name :company_name, :first_name, :l...
+...                              ^
+/Users/esther/Public/hired-api/app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...ame :company_name, :first_name, :last_name, :admin_id, :empl...
+...                              ^
+):
+  
+app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started POST "/employers" for 127.0.0.1 at 2022-08-24 15:16:47 +0300
+  
+SyntaxError (/Users/esther/Public/hired-api/app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+...  validates :role, :user_name :company_name, :first_name, :l...
+...                              ^
+/Users/esther/Public/hired-api/app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...ame :company_name, :first_name, :last_name, :admin_id, :empl...
+...                              ^
+):
+  
+app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started GET "/employers" for 127.0.0.1 at 2022-08-24 15:18:03 +0300
+  
+SyntaxError (/Users/esther/Public/hired-api/app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+...  validates :role, :user_name :company_name, :first_name, :l...
+...                              ^
+/Users/esther/Public/hired-api/app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...ame :company_name, :first_name, :last_name, :admin_id, :empl...
+...                              ^
+):
+  
+app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started POST "/employers" for 127.0.0.1 at 2022-08-24 15:19:12 +0300
+  
+SyntaxError (/Users/esther/Public/hired-api/app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+...  validates :role, :user_name :company_name, :first_name, :l...
+...                              ^
+/Users/esther/Public/hired-api/app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...ame :company_name, :first_name, :last_name, :admin_id, :empl...
+...                              ^
+):
+  
+app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started POST "/employers" for 127.0.0.1 at 2022-08-24 15:20:53 +0300
+  
+SyntaxError (/Users/esther/Public/hired-api/app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+...  validates :role, :user_name :company_name, :first_name, :l...
+...                              ^
+/Users/esther/Public/hired-api/app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...ame :company_name, :first_name, :last_name, :admin_id, :empl...
+...                              ^
+):
+  
+app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started POST "/employers" for 127.0.0.1 at 2022-08-24 15:21:31 +0300
+  
+SyntaxError (/Users/esther/Public/hired-api/app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+...  validates :role, :user_name :company_name, :first_name, :l...
+...                              ^
+/Users/esther/Public/hired-api/app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...ame :company_name, :first_name, :last_name, :admin_id, :empl...
+...                              ^
+):
+  
+app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started POST "/employers" for 127.0.0.1 at 2022-08-24 15:23:13 +0300
+  
+SyntaxError (/Users/esther/Public/hired-api/app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+...  validates :role, :user_name :company_name, :first_name, :l...
+...                              ^
+/Users/esther/Public/hired-api/app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...ame :company_name, :first_name, :last_name, :admin_id, :empl...
+...                              ^
+):
+  
+app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started POST "/employers" for 127.0.0.1 at 2022-08-24 15:26:39 +0300
+Processing by EmployersController#create as */*
+  Parameters: {"first_name"=>"kjds", "last_name"=>"oiuy", "user_name"=>"cvbn", "email"=>"qer@gmail.com", "role"=>"employer", "password"=>"[FILTERED]", "admin_id"=>"1"}
+Completed 500 Internal Server Error in 2ms (Allocations: 166)
+
+
+  
+SyntaxError (/Users/esther/Public/hired-api/app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+...  validates :role, :user_name :company_name, :first_name, :l...
+...                              ^
+/Users/esther/Public/hired-api/app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...ame :company_name, :first_name, :last_name, :admin_id, :empl...
+...                              ^
+):
+  
+app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/models/employer.rb:6: syntax error, unexpected ':', expecting `end'
+app/models/employer.rb:6: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/controllers/employers_controller.rb:11:in `create'
+Started POST "/employers" for 127.0.0.1 at 2022-08-24 15:27:54 +0300
+Processing by EmployersController#create as */*
+  Parameters: {"first_name"=>"kjds", "last_name"=>"oiuy", "user_name"=>"cvbn", "email"=>"qer@gmail.com", "role"=>"employer", "password"=>"[FILTERED]", "admin_id"=>"1"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employers_controller.rb:11:in `create'
+  [1m[36mAdmin Load (33.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employers_controller.rb:11:in `create'
+  [1m[36mEmployer Exists? (6.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "qer@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/employers_controller.rb:11:in `create'
+  [1m[36mEmployer Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "cvbn"], ["LIMIT", 1]]
+  ↳ app/controllers/employers_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/employers_controller.rb:11:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.13ms)
+Completed 422 Unprocessable Entity in 479ms (Views: 1.8ms | ActiveRecord: 102.7ms | Allocations: 19435)
+
+
+Started POST "/employers" for 127.0.0.1 at 2022-08-24 15:29:16 +0300
+Processing by EmployersController#create as */*
+  Parameters: {"first_name"=>"kjds", "last_name"=>"oiuy", "user_name"=>"cvbn", "company_name"=>"Saf", "email"=>"qer@gmail.com", "role"=>"employer", "password"=>"[FILTERED]", "admin_id"=>"1"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employers_controller.rb:11:in `create'
+  [1m[36mAdmin Load (2.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employers_controller.rb:11:in `create'
+  [1m[36mEmployer Exists? (6.9ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "qer@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/employers_controller.rb:11:in `create'
+  [1m[36mEmployer Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "cvbn"], ["LIMIT", 1]]
+  ↳ app/controllers/employers_controller.rb:11:in `create'
+  [1m[36mEmployer Create (7.6ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "cvbn"], ["email", "qer@gmail.com"], ["phone_number", nil], ["password_digest", "[FILTERED]"], ["role", "employer"], ["subscription", nil], ["company_name", "Saf"], ["first_name", "kjds"], ["last_name", "oiuy"], ["admin_id", 1], ["employer", nil], ["created_at", "2022-08-24 12:29:17.483748"], ["updated_at", "2022-08-24 12:29:17.483748"]]
+  ↳ app/controllers/employers_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employers_controller.rb:11:in `create'
+[active_model_serializers] Rendered EmployerSerializer with ActiveModelSerializers::Adapter::Attributes (5.94ms)
+Completed 201 Created in 569ms (Views: 9.5ms | ActiveRecord: 58.6ms | Allocations: 13400)
+
+
