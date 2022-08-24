@@ -2251,3 +2251,315 @@ Processing by AdminsController#index as HTML
 Completed 200 OK in 13ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 2655)
 
 
+Started POST "/job_seekers" for ::1 at 2022-08-24 11:58:43 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobSeekersController#create as JSON
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.73ms)
+Completed 422 Unprocessable Entity in 59ms (Views: 4.4ms | ActiveRecord: 6.4ms | Allocations: 36950)
+
+
+Started POST "/job_seekers" for ::1 at 2022-08-24 12:02:20 +0300
+Processing by JobSeekersController#create as JSON
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (4.5ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (7.23ms)
+Completed 422 Unprocessable Entity in 53ms (Views: 9.0ms | ActiveRecord: 8.4ms | Allocations: 8448)
+
+
+Started POST "/job_seekers" for ::1 at 2022-08-24 12:03:21 +0300
+Processing by JobSeekersController#create as JSON
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (5.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (10.86ms)
+Completed 422 Unprocessable Entity in 61ms (Views: 12.3ms | ActiveRecord: 9.7ms | Allocations: 8448)
+
+
+Started POST "/job_seekers" for ::1 at 2022-08-24 12:13:08 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+"confirm_password": "123456"
+"email": "sammugire@gmail.com"
+"first_name": "Sam"
+"last_name": "Kuria"
+"password": "1234567"
+"role": "jobseeker"
+"user_name": "samwe"
+}
+Processing by JobSeekersController#create as */*
+Completed 400 Bad Request in 0ms (Allocations: 115)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/job_seekers_controller.rb:35:in `seeker_params'
+app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (30.2ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "v@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "1@gmail.com"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "2@gmail.com"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "3@gmail.com"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mJobSeeker Load (0.6ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "v@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "v@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (58.7ms)[0m  [1m[32mINSERT INTO "admins" ("first_name", "last_name", "email", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "cate"], ["last_name", "vuthi"], ["email", "v@gmail.com"], ["password_digest", "[FILTERED]"], ["role", "admin"], ["created_at", "2022-08-24 09:25:14.591108"], ["updated_at", "2022-08-24 09:25:14.591108"]]
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "1@gmail.com"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "1@gmail.com"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "1@gmail.com"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "1@gmail.com"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mJobSeeker Create (39.3ms)[0m  [1m[32mINSERT INTO "job_seekers" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "role", "admin_id", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "1"], ["last_name", "1l"], ["user_name", nil], ["email", "1@gmail.com"], ["phone_number", nil], ["password_digest", "[FILTERED]"], ["role", "jobseeker"], ["admin_id", 1], ["employer_id", nil], ["created_at", "2022-08-24 09:33:46.551608"], ["updated_at", "2022-08-24 09:33:46.551608"]]
+  [1m[36mTRANSACTION (16.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "2@gmail.com"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mJobSeeker Load (1.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "2@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "2"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "2@gmail.com"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Create (0.4ms)[0m  [1m[32mINSERT INTO "job_seekers" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "role", "admin_id", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "2"], ["last_name", "2l"], ["user_name", "2"], ["email", "2@gmail.com"], ["phone_number", nil], ["password_digest", "[FILTERED]"], ["role", "jobseeker"], ["admin_id", 1], ["employer_id", nil], ["created_at", "2022-08-24 09:37:29.312914"], ["updated_at", "2022-08-24 09:37:29.312914"]]
+  [1m[36mTRANSACTION (45.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "3"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "3@gmail.com"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Create (0.4ms)[0m  [1m[32mINSERT INTO "job_seekers" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "role", "admin_id", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "3"], ["last_name", "3l"], ["user_name", "3"], ["email", "3@gmail.com"], ["phone_number", nil], ["password_digest", "[FILTERED]"], ["role", "jobseeker"], ["admin_id", 1], ["employer_id", nil], ["created_at", "2022-08-24 09:37:29.638204"], ["updated_at", "2022-08-24 09:37:29.638204"]]
+  [1m[36mTRANSACTION (63.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJobSeeker Load (1.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers"[0m
+Started POST "/job_seekers" for ::1 at 2022-08-24 12:39:20 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+"confirm_password": "123456"
+"email": "sammugire@gmail.com"
+"first_name": "Sam"
+"last_name": "Kuria"
+"password": "123456789"
+"role": "jobseeker"
+"user_name": "samwe"
+"admin_id": "1"
+}
+Processing by JobSeekersController#create as */*
+Completed 400 Bad Request in 4ms (Allocations: 1378)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/job_seekers_controller.rb:35:in `seeker_params'
+app/controllers/job_seekers_controller.rb:11:in `create'
+Started POST "/job_seekers" for ::1 at 2022-08-24 12:42:02 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+"confirm_password": "123456"
+"email": "sammugire@gmail.com"
+"first_name": "Sam"
+"last_name": "Kuria"
+"password": "123456789"
+"role": "jobseeker"
+"user_name": "samwe"
+"admin_id": "1"
+}
+Processing by JobSeekersController#create as */*
+Completed 400 Bad Request in 7ms (Allocations: 1378)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/job_seekers_controller.rb:34:in `seeker_params'
+app/controllers/job_seekers_controller.rb:11:in `create'
+Started GET "/job_seekers" for ::1 at 2022-08-24 12:42:17 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+"confirm_password": "123456"
+"email": "sammugire@gmail.com"
+"first_name": "Sam"
+"last_name": "Kuria"
+"password": "123456789"
+"role": "jobseeker"
+"user_name": "samwe"
+"admin_id": "1"
+}
+Processing by JobSeekersController#index as */*
+  [1m[36mJobSeeker Load (1.9ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mProfile Load (22.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."job_seeker_id" = $1 LIMIT $2[0m  [["job_seeker_id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."job_seeker_id" = $1 LIMIT $2[0m  [["job_seeker_id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."job_seeker_id" = $1 LIMIT $2[0m  [["job_seeker_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (79.43ms)
+Completed 200 OK in 204ms (Views: 158.7ms | ActiveRecord: 36.1ms | Allocations: 23122)
+
+
+Started POST "/job_seekers" for ::1 at 2022-08-24 12:43:12 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+"email": "sammugire@gmail.com"
+"first_name": "Sam"
+"last_name": "Kuria"
+"password": "123456789"
+"role": "jobseeker"
+"user_name": "samwe"
+"admin_id": "1"
+}
+Processing by JobSeekersController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 114)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/job_seekers_controller.rb:34:in `seeker_params'
+app/controllers/job_seekers_controller.rb:11:in `create'
+Started POST "/job_seekers" for ::1 at 2022-08-24 12:46:21 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+"user_name": '4',
+ "first_name": '4', 
+ "last_name": '4l',
+  "email": '4@gmail.com', 
+  "role": 'jobseeker',
+   "password": '123456789',
+"admin_id": "1"
+}
+Processing by JobSeekersController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 113)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/job_seekers_controller.rb:34:in `seeker_params'
+app/controllers/job_seekers_controller.rb:11:in `create'
+Started POST "/job_seekers" for ::1 at 2022-08-24 12:49:00 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Error occurred while parsing request parameters.
+Contents:
+
+{
+"user_name": '4',
+ "first_name": '4', 
+ "last_name": '4l',
+  "email": '4@gmail.com', 
+  "role": 'jobseeker',
+   "password": '123456789',
+"admin_id": "1"
+}
+Processing by JobSeekersController#create as */*
+Completed 400 Bad Request in 40ms (ActiveRecord: 0.0ms | Allocations: 17552)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/job_seekers_controller.rb:34:in `seeker_params'
+app/controllers/job_seekers_controller.rb:11:in `create'
+Started POST "/job_seekers" for ::1 at 2022-08-24 12:50:04 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Error occurred while parsing request parameters.
+Contents:
+
+{
+"user_name": '4',
+ "first_name": '4', 
+ "last_name": '4l',
+  "email": '4@gmail.com', 
+  "role": 'jobseeker',
+   "password": '123456789',
+"admin_id": "1"
+}
+Processing by JobSeekersController#create as */*
+Completed 400 Bad Request in 37ms (ActiveRecord: 0.0ms | Allocations: 17404)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/job_seekers_controller.rb:34:in `seeker_params'
+app/controllers/job_seekers_controller.rb:11:in `create'

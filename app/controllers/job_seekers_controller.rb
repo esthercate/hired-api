@@ -6,10 +6,10 @@ class JobSeekersController < ApplicationController
     seeker = JobSeeker.all.order(id: :desc)
     render json: seeker, status: :ok
   end
-  
+
   def create
     seeker = JobSeeker.create!(seeker_params)
-    render json: seeker, status: :accepted
+    render json: seeker
   end
 
   def show
@@ -24,11 +24,10 @@ class JobSeekersController < ApplicationController
     render json: {}, status: :no_content
   end
 
-
   private
 
   def render_unprocessable_entity(invalid)
-    render json:{error: invalid.record.errors}, status: :unprocessable_entity
+    render json: { error: invalid.record.errors }, status: :unprocessable_entity
   end
 
   def seeker_params
