@@ -14,7 +14,7 @@ Admin.create!(
     first_name: "kate", 
     last_name: "sam", 
     email: "kate@gmail.com",
-    role: "admin",
+    role: "Admin",
     password: "kate123456"
 )
 
@@ -23,14 +23,14 @@ Admin.create!(
       user_name: Faker::Name.unique.first_name,
       email: Faker::Internet.free_email,
       phone_number: Faker::PhoneNumber.phone_number,
-      role: "Admin",
+      role: "Employer",
       subscription: false,
       company_name: Faker::Company.name,
       first_name: Faker::Name.unique.first_name,
       last_name: Faker::Name.unique.last_name,
       password: "ari123456",
       admin_id: 1
-  )
+        )
 end
 
 10.times do
@@ -42,9 +42,8 @@ end
     phone_number: Faker::PhoneNumber.phone_number,
     password: Faker::Alphanumeric.alphanumeric(number: 10),
     role: "Job seeker",
-    employer_id: nil,
     admin_id: 1
-  )
+    )
 
 end
 
