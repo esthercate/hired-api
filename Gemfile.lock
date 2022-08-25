@@ -73,7 +73,7 @@ GEM
       tzinfo (~> 2.0)
     aws-eventstream (1.2.0)
     aws-partitions (1.621.0)
-    aws-sdk-core (3.133.0)
+    aws-sdk-core (3.135.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.525.0)
       aws-sigv4 (~> 1.1)
@@ -120,7 +120,6 @@ GEM
     method_source (1.0.0)
     mini_magick (4.11.0)
     mini_mime (1.1.2)
-    mini_portile2 (2.8.0)
     minitest (5.16.3)
     net-imap (0.2.3)
       digest
@@ -137,12 +136,7 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.8)
-      mini_portile2 (~> 2.8.0)
-      racc (~> 1.4)
     nokogiri (1.13.8-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     pg (1.4.3)
     puma (5.6.5)
@@ -196,13 +190,11 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
-  ruby
   x86_64-darwin-21
-  x86_64-linux
 
 DEPENDENCIES
   active_model_serializers
-  aws-sdk-s3
+  aws-sdk-s3 (~> 1.114)
   bcrypt
   debug
   image_processing (~> 1.2)
@@ -217,4 +209,4 @@ RUBY VERSION
    ruby 2.7.4p191
 
 BUNDLED WITH
-   2.3.19
+   2.3.21
