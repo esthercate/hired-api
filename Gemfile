@@ -16,6 +16,8 @@ gem "bcrypt"
 
 gem 'active_model_serializers'
 
+gem 'faker'
+
 gem "aws-sdk-s3", require: false
 
 # Use Active Storage variant
