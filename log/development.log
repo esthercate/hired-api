@@ -60,3 +60,23 @@ Processing by AdminsController#index as HTML
 Completed 200 OK in 260ms (Views: 48.8ms | ActiveRecord: 138.8ms | Allocations: 9882)
 
 
+Started GET "/" for 127.0.0.1 at 2022-08-25 11:14:55 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (42.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.2ms | Allocations: 626)
+Completed 200 OK in 29ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 3342)
+
+
+Started GET "/employers" for 127.0.0.1 at 2022-08-25 11:15:02 +0300
+Processing by EmployersController#index as HTML
+  [1m[36mEmployer Load (1.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJobSeeker Load (1.9ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."employer_id" = $1[0m  [["employer_id", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJobSeeker Load (0.5ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."employer_id" = $1[0m  [["employer_id", 2]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (84.44ms)
+Completed 200 OK in 239ms (Views: 159.3ms | ActiveRecord: 32.4ms | Allocations: 28153)
+
+
