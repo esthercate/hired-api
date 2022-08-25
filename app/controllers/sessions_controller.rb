@@ -14,10 +14,10 @@ class SessionsController < ApplicationController
 
     if Admin.find_by(email: params[:email])
       user = Admin.find_by(email: params[:email])
-    elsif Employer.find_by(email: params[:email]) || Employer.find_by(user_name: params[:email])
-      user = Employer.find_by(email: params[:email]) || Employer.find_by(user_name: params[:email])
-    elsif JobSeeker.find_by(email: params[:email]) || JobSeeker.find_by(user_name: params[:email])
-      user = JobSeeker.find_by(email: params[:email]) || JobSeeker.find_by(user_name: params[:email])
+    elsif Employer.find_by(email: params[:email]) || Employer.find_by(user_name: params[:user_name])
+      user = Employer.find_by(email: params[:email]) || Employer.find_by(user_name: params[:user_name])
+    elsif JobSeeker.find_by(email: params[:email]) || JobSeeker.find_by(user_name: params[:user_name])
+      user = JobSeeker.find_by(email: params[:email]) || JobSeeker.find_by(user_name: params[:user_name])
     end
 
     if user&.authenticate(params[:password])

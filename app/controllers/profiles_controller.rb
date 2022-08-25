@@ -2,6 +2,10 @@ class ProfilesController < ApplicationController
   wrap_parameters format: []
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
+  def index 
+    render json: Profile.all
+  end 
+
   def create
     profile = Profile.create!(profile_params)
     render json: profile, status: :accepted

@@ -16,8 +16,6 @@ gem "bcrypt"
 
 gem 'active_model_serializers'
 
-gem 'faker'
-
 gem "aws-sdk-s3", require: false
 
 # Use Active Storage variant
@@ -25,11 +23,14 @@ gem 'image_processing', '~> 1.2'
 
 # gem 'active_storage_validations'
 
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem "rack-cors"
+gem "rack-cors"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
