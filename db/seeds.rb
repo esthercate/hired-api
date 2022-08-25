@@ -7,5 +7,3 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 Admin.create(first_name: "cate", last_name: "vuthi", email: "v@gmail.com", role: "admin")
-
-
