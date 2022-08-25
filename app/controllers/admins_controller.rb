@@ -16,11 +16,16 @@ class AdminsController < ApplicationController
         end
     end
    
-
     def create 
         admin = Admin.create!(admin_params)
         render json: admin, status: :created
     end
+
+    def destroy
+        admin = Admin.find_by(id: params[:id])
+        admin.destroy
+        render json: {}, status: :no_content
+     end
 
     private 
 
