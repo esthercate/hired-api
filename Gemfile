@@ -16,7 +16,7 @@ gem "bcrypt"
 
 gem 'active_model_serializers'
 
-gem "aws-sdk-s3", require: false
+gem "aws-sdk-s3", 
 
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
