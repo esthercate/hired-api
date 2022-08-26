@@ -995,5 +995,856 @@ Processing by EmployersController#index as HTML
 [active_model_serializers]   ↳ app/controllers/employers_controller.rb:7:in `index'
 [active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (57.63ms)
 Completed 200 OK in 82ms (Views: 48.6ms | ActiveRecord: 25.0ms | Allocations: 21206)
+<<<<<<< HEAD
+=======
 
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Melva Harris"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "filomena.witting@gerhold.name"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Wilmer Kirlin"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "louisa@cronin-frami.info"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Stevie Dare"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "shaun_huel@considine.net"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Reuben Torphy"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "charita.funk@goyette.biz"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Ray Schmeler"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "wilson@johnson.biz"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-24 12:35:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-24 12:35:55 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.7ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mProfile Load (0.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."job_seeker_id" = $1 LIMIT $2[0m  [["job_seeker_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (31.76ms)
+Completed 200 OK in 75ms (Views: 58.6ms | ActiveRecord: 7.7ms | Allocations: 26034)
+
+
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-24 12:35:59 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."job_seeker_id" = $1 LIMIT $2[0m  [["job_seeker_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.97ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.6ms | Allocations: 1915)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-24 12:35:59 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2022-08-24 12:36:21 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.3ms | Allocations: 375)
+Completed 200 OK in 14ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 1152)
+
+
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-24 12:36:28 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.4ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."job_seeker_id" = $1 LIMIT $2[0m  [["job_seeker_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.93ms)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.7ms | Allocations: 1895)
+
+
+  [1m[36mJobSeeker Load (0.5ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Dr. Diamond Haag"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "chase@bednar.net"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Christinia Nicolas"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "archie.ebert@ryan.io"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Newton Farrell"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "lashandra.nader@koss.net"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Nicky Renner"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "emory@schinner-bayer.biz"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Christoper Hauck"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "ralph@gleason-johns.io"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Michell Berge"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "chrissy.langosh@larkin-bednar.co"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Wallace Heathcote"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "marsha.powlowski@hoppe.com"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" = $1 LIMIT $2[0m  [["phone_number", 0], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Rev. Rick Hodkiewicz"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "fausto@heidenreich.io"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" = $1 LIMIT $2[0m  [["phone_number", 0], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Prof. Kelvin Herman"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "seymour_armstrong@rippin.io"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" = $1 LIMIT $2[0m  [["phone_number", 296], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Shirl Koelpin II"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "louie@spencer.io"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" = $1 LIMIT $2[0m  [["phone_number", 985], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Genna Paucek"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "stefani_larson@volkman-bradtke.org"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" = $1 LIMIT $2[0m  [["phone_number", 0], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mJobSeeker Load (0.5ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers"[0m
+  [1m[36mJobSeeker Load (0.4ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers"[0m
+  [1m[36mJobSeeker Load (0.4ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers"[0m
+  [1m[36mJobSeeker Load (0.5ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers"[0m
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-24 12:45:44 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (0.6ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."job_seeker_id" = $1 LIMIT $2[0m  [["job_seeker_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (20.81ms)
+Completed 200 OK in 66ms (Views: 39.8ms | ActiveRecord: 6.1ms | Allocations: 41304)
+>>>>>>> hinga
+
+
+  [1m[36mJobSeeker Load (0.4ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Soon Wunsch Esq."], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "bert_schimmel@lang.name"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" = $1 LIMIT $2[0m  [["phone_number", 822], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Clemente Grant"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "tobias@shields.info"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" = $1 LIMIT $2[0m  [["phone_number", 0], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Fr. Katerine Abernathy"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "lisette@powlowski-schimmel.co"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" = $1 LIMIT $2[0m  [["phone_number", 546], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Felton Sporer"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "damion@yundt.info"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" = $1 LIMIT $2[0m  [["phone_number", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Carissa Ziemann"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "augustine_romaguera@bradtke.name"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."phone_number" = $1 LIMIT $2[0m  [["phone_number", 0], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mJobSeeker Load (0.7ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers"[0m
+  [1m[36mJobSeeker Load (0.5ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers"[0m
+  [1m[36mJobSeeker Load (0.4ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7855018080824880525)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAdmins (20220821172343)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (21.2ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "role" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220821172343"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEmployers (20220821172924)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "employers" ("id" bigserial primary key, "user_name" character varying, "email" character varying, "phone_number" integer, "password_digest" character varying, "role" character varying, "subscription" boolean, "company_name" character varying, "first_name" character varying, "last_name" character varying, "admin_id" integer, "employer" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220821172924"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7855018080824880525)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Fred Turcotte"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "jarrett_zulauf@braun-leannon.name"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Gov. Xavier Ruecker"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "colleen@koepp.info"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Ignacia Schinner"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "erma@sawayn.co"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Doug Ratke"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "hans@gorczany.info"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Rep. Irena Miller"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "lachelle@wisoky.io"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Kurt Spinka"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "minh@stehr.org"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Byron Williamson"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "assunta@lebsack.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Freida Fritsch"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "grady.mohr@rau.name"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Leilani McKenzie"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "sandra_spinka@mitchell-mosciski.info"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Harland Tromp"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "vernell_gorczany@pfannerstill-morissette.io"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (0.5ms)[0m  [1m[32mINSERT INTO "admins" ("first_name", "last_name", "email", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "kate"], ["last_name", "sam"], ["email", "kate@gmail.com"], ["password_digest", "[FILTERED]"], ["role", "admin"], ["created_at", "2022-08-25 19:54:23.827395"], ["updated_at", "2022-08-25 19:54:23.827395"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "douglas_koss@gmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Luciana"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.5ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Luciana"], ["email", "douglas_koss@gmail.com"], ["phone_number", 1], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Thompson, Yost and Weber"], ["first_name", "Ester"], ["last_name", "Schoen"], ["admin_id", 1], ["employer", nil], ["created_at", "2022-08-25 19:54:24.106763"], ["updated_at", "2022-08-25 19:54:24.106763"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "kyong@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Amee"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Amee"], ["email", "kyong@hotmail.com"], ["phone_number", 1], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Emmerich LLC"], ["first_name", "Edie"], ["last_name", "Barrows"], ["admin_id", 1], ["employer", nil], ["created_at", "2022-08-25 19:54:24.364572"], ["updated_at", "2022-08-25 19:54:24.364572"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "josephina@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Homer"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Homer"], ["email", "josephina@hotmail.com"], ["phone_number", 1], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Mosciski, Crooks and Hyatt"], ["first_name", "Woodrow"], ["last_name", "Lesch"], ["admin_id", 1], ["employer", nil], ["created_at", "2022-08-25 19:54:24.620676"], ["updated_at", "2022-08-25 19:54:24.620676"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "sybil@gmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Deloise"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.2ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Deloise"], ["email", "sybil@gmail.com"], ["phone_number", 0], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Mohr, Paucek and Bins"], ["first_name", "Horacio"], ["last_name", "Carter"], ["admin_id", 1], ["employer", nil], ["created_at", "2022-08-25 19:54:24.879583"], ["updated_at", "2022-08-25 19:54:24.879583"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "jean@gmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Lizeth"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.2ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Lizeth"], ["email", "jean@gmail.com"], ["phone_number", 0], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "West Inc"], ["first_name", "Brooks"], ["last_name", "Thompson"], ["admin_id", 1], ["employer", nil], ["created_at", "2022-08-25 19:54:25.137431"], ["updated_at", "2022-08-25 19:54:25.137431"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "claud.kuhic@gmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Dwain"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.2ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Dwain"], ["email", "claud.kuhic@gmail.com"], ["phone_number", 0], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Prosacco-Windler"], ["first_name", "Avery"], ["last_name", "Friesen"], ["admin_id", 1], ["employer", nil], ["created_at", "2022-08-25 19:54:25.393314"], ["updated_at", "2022-08-25 19:54:25.393314"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "carlton.crist@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Cara"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Cara"], ["email", "carlton.crist@yahoo.com"], ["phone_number", 1], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Stiedemann and Sons"], ["first_name", "Corina"], ["last_name", "Olson"], ["admin_id", 1], ["employer", nil], ["created_at", "2022-08-25 19:54:25.651692"], ["updated_at", "2022-08-25 19:54:25.651692"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "kraig.douglas@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Junior"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.2ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Junior"], ["email", "kraig.douglas@yahoo.com"], ["phone_number", 1], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Willms Group"], ["first_name", "Janet"], ["last_name", "Lubowitz"], ["admin_id", 1], ["employer", nil], ["created_at", "2022-08-25 19:54:25.908913"], ["updated_at", "2022-08-25 19:54:25.908913"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "jasmine@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Marceline"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.2ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Marceline"], ["email", "jasmine@yahoo.com"], ["phone_number", 837], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Runolfsson LLC"], ["first_name", "Genevive"], ["last_name", "Upton"], ["admin_id", 1], ["employer", nil], ["created_at", "2022-08-25 19:54:26.165560"], ["updated_at", "2022-08-25 19:54:26.165560"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "sol@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Hilario"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.2ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Hilario"], ["email", "sol@yahoo.com"], ["phone_number", 545], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Bradtke-Reinger"], ["first_name", "Tanner"], ["last_name", "Jones"], ["admin_id", 1], ["employer", nil], ["created_at", "2022-08-25 19:54:26.427297"], ["updated_at", "2022-08-25 19:54:26.427297"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJobSeeker Load (0.7ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers"[0m
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Loyce Koss"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "cliff@fay-bradtke.info"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Marjory Little"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "alana_wiegand@zemlak-hilpert.org"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Miss Maire Murray"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "shanna@keebler.biz"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Prof. Frank Heller"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "marquerite_jones@kerluke.io"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Create (2.7ms)[0m  [1m[32mINSERT INTO "job_seekers" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "role", "admin_id", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Virgen Wiegand"], ["last_name", "Herminia Crist"], ["user_name", "Prof. Frank Heller"], ["email", "marquerite_jones@kerluke.io"], ["phone_number", 0], ["password_digest", "[FILTERED]"], ["role", "Job seeker"], ["admin_id", 1], ["employer_id", 1], ["created_at", "2022-08-25 20:03:40.721385"], ["updated_at", "2022-08-25 20:03:40.721385"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Yer Baumbach"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "donella@kessler.co"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Create (0.3ms)[0m  [1m[32mINSERT INTO "job_seekers" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "role", "admin_id", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Leslie Reichel"], ["last_name", "Jackie Stanton"], ["user_name", "Yer Baumbach"], ["email", "donella@kessler.co"], ["phone_number", 985], ["password_digest", "[FILTERED]"], ["role", "Job seeker"], ["admin_id", 1], ["employer_id", 1], ["created_at", "2022-08-25 20:03:40.981361"], ["updated_at", "2022-08-25 20:03:40.981361"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Teddy Wolff"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "gricelda@legros-kshlerin.biz"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Create (0.3ms)[0m  [1m[32mINSERT INTO "job_seekers" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "role", "admin_id", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Juana Lemke"], ["last_name", "Rayford Hammes"], ["user_name", "Teddy Wolff"], ["email", "gricelda@legros-kshlerin.biz"], ["phone_number", 0], ["password_digest", "[FILTERED]"], ["role", "Job seeker"], ["admin_id", 1], ["employer_id", 1], ["created_at", "2022-08-25 20:03:41.235262"], ["updated_at", "2022-08-25 20:03:41.235262"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Tori Legros"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "debi@miller-leannon.io"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Create (0.3ms)[0m  [1m[32mINSERT INTO "job_seekers" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "role", "admin_id", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Marcy King III"], ["last_name", "Lemuel Larkin DC"], ["user_name", "Tori Legros"], ["email", "debi@miller-leannon.io"], ["phone_number", 155], ["password_digest", "[FILTERED]"], ["role", "Job seeker"], ["admin_id", 1], ["employer_id", 1], ["created_at", "2022-08-25 20:03:41.493294"], ["updated_at", "2022-08-25 20:03:41.493294"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Msgr. Dusty Reynolds"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "javier@spinka.org"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Create (0.3ms)[0m  [1m[32mINSERT INTO "job_seekers" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "role", "admin_id", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Cordell Batz"], ["last_name", "Pres. Whitney Zieme"], ["user_name", "Msgr. Dusty Reynolds"], ["email", "javier@spinka.org"], ["phone_number", 858], ["password_digest", "[FILTERED]"], ["role", "Job seeker"], ["admin_id", 1], ["employer_id", 1], ["created_at", "2022-08-25 20:03:41.751413"], ["updated_at", "2022-08-25 20:03:41.751413"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Marcellus Toy"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "janeth_koss@schmitt.com"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Create (0.3ms)[0m  [1m[32mINSERT INTO "job_seekers" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "role", "admin_id", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Josie Ziemann"], ["last_name", "Avery Conn"], ["user_name", "Marcellus Toy"], ["email", "janeth_koss@schmitt.com"], ["phone_number", 1], ["password_digest", "[FILTERED]"], ["role", "Job seeker"], ["admin_id", 1], ["employer_id", 1], ["created_at", "2022-08-25 20:03:42.010360"], ["updated_at", "2022-08-25 20:03:42.010360"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Load (0.2ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Ms. Jaime Kutch"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "wilmer@dibbert-bogan.biz"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Create (0.4ms)[0m  [1m[32mINSERT INTO "job_seekers" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "role", "admin_id", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Leana Thiel"], ["last_name", "Waldo Lueilwitz"], ["user_name", "Ms. Jaime Kutch"], ["email", "wilmer@dibbert-bogan.biz"], ["phone_number", 952], ["password_digest", "[FILTERED]"], ["role", "Job seeker"], ["admin_id", 1], ["employer_id", 1], ["created_at", "2022-08-25 20:03:42.269479"], ["updated_at", "2022-08-25 20:03:42.269479"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Load (0.2ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Tonisha Grimes"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "rosemarie.hackett@schimmel.org"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Create (0.3ms)[0m  [1m[32mINSERT INTO "job_seekers" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "role", "admin_id", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Pierre Schinner"], ["last_name", "Bill Howe"], ["user_name", "Tonisha Grimes"], ["email", "rosemarie.hackett@schimmel.org"], ["phone_number", 0], ["password_digest", "[FILTERED]"], ["role", "Job seeker"], ["admin_id", 1], ["employer_id", 1], ["created_at", "2022-08-25 20:03:42.529080"], ["updated_at", "2022-08-25 20:03:42.529080"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Load (0.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Andrew Kuhn"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "jimmie@hintz.co"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Create (0.2ms)[0m  [1m[32mINSERT INTO "job_seekers" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "role", "admin_id", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "Lane Langosh"], ["last_name", "Dwayne Gleason"], ["user_name", "Andrew Kuhn"], ["email", "jimmie@hintz.co"], ["phone_number", 755], ["password_digest", "[FILTERED]"], ["role", "Job seeker"], ["admin_id", 1], ["employer_id", 1], ["created_at", "2022-08-25 20:03:42.789440"], ["updated_at", "2022-08-25 20:03:42.789440"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Load (0.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Dave Powlowski"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "burton_daugherty@nicolas.co"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Create (0.2ms)[0m  [1m[32mINSERT INTO "job_seekers" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "role", "admin_id", "employer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["first_name", "My Borer CPA"], ["last_name", "Walter Goyette"], ["user_name", "Dave Powlowski"], ["email", "burton_daugherty@nicolas.co"], ["phone_number", 0], ["password_digest", "[FILTERED]"], ["role", "Job seeker"], ["admin_id", 1], ["employer_id", 1], ["created_at", "2022-08-25 20:03:43.046487"], ["updated_at", "2022-08-25 20:03:43.046487"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Ms. Juan Schuppe"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "rudolph_gulgowski@metz-hauck.info"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Vannesa Walsh"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "esta@brakus-koelpin.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Elida Roob"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "serafina_rau@armstrong.org"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "job_seekers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "admins" DISABLE TRIGGER ALL;ALTER TABLE "employers" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (59.3ms)[0m  [1m[35mTRUNCATE TABLE "job_seekers", "active_storage_blobs", "active_storage_attachments", "active_storage_variant_records", "profiles", "admins", "employers"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "job_seekers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "admins" ENABLE TRIGGER ALL;ALTER TABLE "employers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (0.6ms)[0m  [1m[32mINSERT INTO "admins" ("first_name", "last_name", "email", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "kate"], ["last_name", "sam"], ["email", "kate@gmail.com"], ["password_digest", "[FILTERED]"], ["role", "admin"], ["created_at", "2022-08-25 20:17:17.434000"], ["updated_at", "2022-08-25 20:17:17.434000"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "olga@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Shanika"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "job_seekers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "admins" DISABLE TRIGGER ALL;ALTER TABLE "employers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (62.0ms)[0m  [1m[35mTRUNCATE TABLE "job_seekers", "active_storage_blobs", "active_storage_variant_records", "profiles", "admins", "employers", "active_storage_attachments"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "job_seekers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" ENABLE TRIGGER ALL;ALTER TABLE "admins" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "employers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (0.4ms)[0m  [1m[32mINSERT INTO "admins" ("first_name", "last_name", "email", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "kate"], ["last_name", "sam"], ["email", "kate@gmail.com"], ["password_digest", "[FILTERED]"], ["role", "admin"], ["created_at", "2022-08-25 20:18:25.944148"], ["updated_at", "2022-08-25 20:18:25.944148"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "donovan_schulist@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Denita"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mJobSeeker Load (0.9ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers"[0m
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "job_seekers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" DISABLE TRIGGER ALL;ALTER TABLE "admins" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "employers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (58.6ms)[0m  [1m[35mTRUNCATE TABLE "job_seekers", "active_storage_blobs", "active_storage_variant_records", "admins", "profiles", "employers", "active_storage_attachments"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "job_seekers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" ENABLE TRIGGER ALL;ALTER TABLE "admins" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "employers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (0.4ms)[0m  [1m[32mINSERT INTO "admins" ("first_name", "last_name", "email", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "kate"], ["last_name", "sam"], ["email", "kate@gmail.com"], ["password_digest", "[FILTERED]"], ["role", "admin"], ["created_at", "2022-08-25 20:19:48.253086"], ["updated_at", "2022-08-25 20:19:48.253086"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "rupert.mertz@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Maribel"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "job_seekers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" DISABLE TRIGGER ALL;ALTER TABLE "admins" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "employers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (54.3ms)[0m  [1m[35mTRUNCATE TABLE "job_seekers", "active_storage_blobs", "active_storage_variant_records", "admins", "profiles", "employers", "active_storage_attachments"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "job_seekers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" ENABLE TRIGGER ALL;ALTER TABLE "admins" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "employers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate1@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (0.4ms)[0m  [1m[32mINSERT INTO "admins" ("first_name", "last_name", "email", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "kate"], ["last_name", "sam"], ["email", "kate1@gmail.com"], ["password_digest", "[FILTERED]"], ["role", "admin"], ["created_at", "2022-08-25 20:20:09.545944"], ["updated_at", "2022-08-25 20:20:09.545944"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "daniele@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Talia"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "job_seekers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" DISABLE TRIGGER ALL;ALTER TABLE "admins" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "employers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (58.0ms)[0m  [1m[35mTRUNCATE TABLE "job_seekers", "active_storage_blobs", "active_storage_variant_records", "admins", "profiles", "employers", "active_storage_attachments"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "job_seekers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" ENABLE TRIGGER ALL;ALTER TABLE "admins" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "employers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (0.5ms)[0m  [1m[32mINSERT INTO "admins" ("first_name", "last_name", "email", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "kate"], ["last_name", "sam"], ["email", "kate@gmail.com"], ["password_digest", "[FILTERED]"], ["role", "admin"], ["created_at", "2022-08-25 20:21:20.296195"], ["updated_at", "2022-08-25 20:21:20.296195"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "catharine@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Luther"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate55@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (0.4ms)[0m  [1m[32mINSERT INTO "admins" ("first_name", "last_name", "email", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "kate"], ["last_name", "sam"], ["email", "kate55@gmail.com"], ["password_digest", "[FILTERED]"], ["role", "admin"], ["created_at", "2022-08-25 20:21:51.631066"], ["updated_at", "2022-08-25 20:21:51.631066"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "merlin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Fabian"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "job_seekers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" DISABLE TRIGGER ALL;ALTER TABLE "admins" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "employers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (57.0ms)[0m  [1m[35mTRUNCATE TABLE "job_seekers", "active_storage_blobs", "active_storage_variant_records", "admins", "profiles", "employers", "active_storage_attachments"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "job_seekers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" ENABLE TRIGGER ALL;ALTER TABLE "admins" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "employers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate55@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (0.4ms)[0m  [1m[32mINSERT INTO "admins" ("first_name", "last_name", "email", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "kate"], ["last_name", "sam"], ["email", "kate55@gmail.com"], ["password_digest", "[FILTERED]"], ["role", "admin"], ["created_at", "2022-08-25 20:22:35.083912"], ["updated_at", "2022-08-25 20:22:35.083912"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "phillis_smith@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Abby"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.5ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Abby"], ["email", "phillis_smith@hotmail.com"], ["phone_number", 0], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Fadel and Sons"], ["first_name", "Brant"], ["last_name", "Ebert"], ["admin_id", 8], ["employer", nil], ["created_at", "2022-08-25 20:22:36.576945"], ["updated_at", "2022-08-25 20:22:36.576945"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "natalie.reilly@gmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Domonique"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Domonique"], ["email", "natalie.reilly@gmail.com"], ["phone_number", 1], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Gerlach-Ferry"], ["first_name", "Imelda"], ["last_name", "Volkman"], ["admin_id", 8], ["employer", nil], ["created_at", "2022-08-25 20:22:36.836800"], ["updated_at", "2022-08-25 20:22:36.836800"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "jeffry.muller@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Arthur"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Arthur"], ["email", "jeffry.muller@yahoo.com"], ["phone_number", 776], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Runolfsson, Tromp and Nader"], ["first_name", "Judson"], ["last_name", "Casper"], ["admin_id", 8], ["employer", nil], ["created_at", "2022-08-25 20:22:37.094704"], ["updated_at", "2022-08-25 20:22:37.094704"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "lavonna.auer@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Mariano"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Mariano"], ["email", "lavonna.auer@yahoo.com"], ["phone_number", 295], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Stiedemann Inc"], ["first_name", "Kate"], ["last_name", "Zieme"], ["admin_id", 8], ["employer", nil], ["created_at", "2022-08-25 20:22:37.352409"], ["updated_at", "2022-08-25 20:22:37.352409"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "aleisha@gmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Hue"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.2ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Hue"], ["email", "aleisha@gmail.com"], ["phone_number", 735], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Yost LLC"], ["first_name", "Shella"], ["last_name", "Conroy"], ["admin_id", 8], ["employer", nil], ["created_at", "2022-08-25 20:22:37.610752"], ["updated_at", "2022-08-25 20:22:37.610752"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "mandi@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Odell"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.2ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Odell"], ["email", "mandi@hotmail.com"], ["phone_number", 0], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Howe LLC"], ["first_name", "Wilhemina"], ["last_name", "Paucek"], ["admin_id", 8], ["employer", nil], ["created_at", "2022-08-25 20:22:37.869038"], ["updated_at", "2022-08-25 20:22:37.869038"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "kami.nienow@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Augustine"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.2ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Augustine"], ["email", "kami.nienow@hotmail.com"], ["phone_number", 1], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Reinger and Sons"], ["first_name", "Weston"], ["last_name", "Cassin"], ["admin_id", 8], ["employer", nil], ["created_at", "2022-08-25 20:22:38.126334"], ["updated_at", "2022-08-25 20:22:38.126334"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "valentine.collins@gmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Nathan"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.2ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Nathan"], ["email", "valentine.collins@gmail.com"], ["phone_number", 1], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Keeling Inc"], ["first_name", "Rayna"], ["last_name", "Mayert"], ["admin_id", 8], ["employer", nil], ["created_at", "2022-08-25 20:22:38.379223"], ["updated_at", "2022-08-25 20:22:38.379223"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "kelley@gmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Jamaal"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.2ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Jamaal"], ["email", "kelley@gmail.com"], ["phone_number", 692], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Emard, Zboncak and Schneider"], ["first_name", "Arlinda"], ["last_name", "Heaney"], ["admin_id", 8], ["employer", nil], ["created_at", "2022-08-25 20:22:38.635224"], ["updated_at", "2022-08-25 20:22:38.635224"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "virgina.rutherford@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Sherrell"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.2ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Sherrell"], ["email", "virgina.rutherford@hotmail.com"], ["phone_number", 1], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Smith, Harber and Lehner"], ["first_name", "Melvin"], ["last_name", "White"], ["admin_id", 8], ["employer", nil], ["created_at", "2022-08-25 20:22:38.892787"], ["updated_at", "2022-08-25 20:22:38.892787"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Leanna Wilderman II"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "norris@hilll.net"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mEmployer Load (0.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  [1m[36mJobSeeker Load (0.6ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate55@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "job_seekers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" DISABLE TRIGGER ALL;ALTER TABLE "admins" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "employers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (57.4ms)[0m  [1m[35mTRUNCATE TABLE "job_seekers", "active_storage_blobs", "active_storage_variant_records", "admins", "profiles", "employers", "active_storage_attachments"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "job_seekers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" ENABLE TRIGGER ALL;ALTER TABLE "admins" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "employers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate55@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (0.5ms)[0m  [1m[32mINSERT INTO "admins" ("first_name", "last_name", "email", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "kate"], ["last_name", "sam"], ["email", "kate55@gmail.com"], ["password_digest", "[FILTERED]"], ["role", "admin"], ["created_at", "2022-08-25 20:24:13.419594"], ["updated_at", "2022-08-25 20:24:13.419594"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "dean@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Pierre"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "job_seekers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" DISABLE TRIGGER ALL;ALTER TABLE "admins" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "employers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (58.5ms)[0m  [1m[35mTRUNCATE TABLE "job_seekers", "active_storage_blobs", "active_storage_variant_records", "admins", "profiles", "employers", "active_storage_attachments"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "job_seekers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" ENABLE TRIGGER ALL;ALTER TABLE "admins" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "employers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate55@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (0.5ms)[0m  [1m[32mINSERT INTO "admins" ("first_name", "last_name", "email", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "kate"], ["last_name", "sam"], ["email", "kate55@gmail.com"], ["password_digest", "[FILTERED]"], ["role", "admin"], ["created_at", "2022-08-25 20:25:15.196697"], ["updated_at", "2022-08-25 20:25:15.196697"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "cleora.maggio@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Emile"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.4ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Emile"], ["email", "cleora.maggio@hotmail.com"], ["phone_number", 1], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Price, Hickle and Jenkins"], ["first_name", "Eloise"], ["last_name", "Dicki"], ["admin_id", 10], ["employer", nil], ["created_at", "2022-08-25 20:25:16.704032"], ["updated_at", "2022-08-25 20:25:16.704032"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "claudie@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Lorriane"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Lorriane"], ["email", "claudie@yahoo.com"], ["phone_number", 651], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Cummerata-Goodwin"], ["first_name", "Carey"], ["last_name", "Lowe"], ["admin_id", 10], ["employer", nil], ["created_at", "2022-08-25 20:25:16.965628"], ["updated_at", "2022-08-25 20:25:16.965628"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "tonda_kuhic@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Lorri"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Lorri"], ["email", "tonda_kuhic@hotmail.com"], ["phone_number", 0], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Hermiston-Stoltenberg"], ["first_name", "Adina"], ["last_name", "Mertz"], ["admin_id", 10], ["employer", nil], ["created_at", "2022-08-25 20:25:17.224365"], ["updated_at", "2022-08-25 20:25:17.224365"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "kendall@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Lissa"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Lissa"], ["email", "kendall@hotmail.com"], ["phone_number", 752], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Maggio LLC"], ["first_name", "Mickey"], ["last_name", "Morar"], ["admin_id", 10], ["employer", nil], ["created_at", "2022-08-25 20:25:17.480458"], ["updated_at", "2022-08-25 20:25:17.480458"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "aurea@gmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Taylor"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Taylor"], ["email", "aurea@gmail.com"], ["phone_number", 0], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Gutmann-Dickens"], ["first_name", "Victor"], ["last_name", "Rogahn"], ["admin_id", 10], ["employer", nil], ["created_at", "2022-08-25 20:25:17.734435"], ["updated_at", "2022-08-25 20:25:17.734435"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "dennis@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Shelton"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.2ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Shelton"], ["email", "dennis@yahoo.com"], ["phone_number", 1], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Harvey, Considine and Herzog"], ["first_name", "Bernadine"], ["last_name", "Dach"], ["admin_id", 10], ["employer", nil], ["created_at", "2022-08-25 20:25:17.992425"], ["updated_at", "2022-08-25 20:25:17.992425"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "hollis.mayert@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Camelia"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Camelia"], ["email", "hollis.mayert@hotmail.com"], ["phone_number", 1], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Daugherty Inc"], ["first_name", "Ian"], ["last_name", "Lind"], ["admin_id", 10], ["employer", nil], ["created_at", "2022-08-25 20:25:18.249001"], ["updated_at", "2022-08-25 20:25:18.249001"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "dara@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Eloy"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Eloy"], ["email", "dara@hotmail.com"], ["phone_number", 721], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Wiza-Wilkinson"], ["first_name", "Nelson"], ["last_name", "VonRueden"], ["admin_id", 10], ["employer", nil], ["created_at", "2022-08-25 20:25:18.505290"], ["updated_at", "2022-08-25 20:25:18.505290"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "coralee@gmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Rodolfo"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Rodolfo"], ["email", "coralee@gmail.com"], ["phone_number", 783], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Emard Inc"], ["first_name", "Nathanael"], ["last_name", "Rath"], ["admin_id", 10], ["employer", nil], ["created_at", "2022-08-25 20:25:18.761315"], ["updated_at", "2022-08-25 20:25:18.761315"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "marshall_kutch@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Courtney"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Courtney"], ["email", "marshall_kutch@yahoo.com"], ["phone_number", 665], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Sporer LLC"], ["first_name", "Hiedi"], ["last_name", "Leffler"], ["admin_id", 10], ["employer", nil], ["created_at", "2022-08-25 20:25:19.017151"], ["updated_at", "2022-08-25 20:25:19.017151"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJobSeeker Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Leonia Hegmann"], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "gail@kiehn.name"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "job_seekers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" DISABLE TRIGGER ALL;ALTER TABLE "admins" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "employers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (57.4ms)[0m  [1m[35mTRUNCATE TABLE "job_seekers", "active_storage_blobs", "active_storage_variant_records", "admins", "profiles", "employers", "active_storage_attachments"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "job_seekers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" ENABLE TRIGGER ALL;ALTER TABLE "admins" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "employers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate55@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (0.5ms)[0m  [1m[32mINSERT INTO "admins" ("first_name", "last_name", "email", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "kate"], ["last_name", "sam"], ["email", "kate55@gmail.com"], ["password_digest", "[FILTERED]"], ["role", "admin"], ["created_at", "2022-08-25 20:25:41.887920"], ["updated_at", "2022-08-25 20:25:41.887920"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "kala_satterfield@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Randell"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "job_seekers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" DISABLE TRIGGER ALL;ALTER TABLE "admins" DISABLE TRIGGER ALL;ALTER TABLE "profiles" DISABLE TRIGGER ALL;ALTER TABLE "employers" DISABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (61.0ms)[0m  [1m[35mTRUNCATE TABLE "job_seekers", "active_storage_blobs", "active_storage_variant_records", "admins", "profiles", "employers", "active_storage_attachments"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "job_seekers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_blobs" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_variant_records" ENABLE TRIGGER ALL;ALTER TABLE "admins" ENABLE TRIGGER ALL;ALTER TABLE "profiles" ENABLE TRIGGER ALL;ALTER TABLE "employers" ENABLE TRIGGER ALL;ALTER TABLE "active_storage_attachments" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate55@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (0.5ms)[0m  [1m[32mINSERT INTO "admins" ("first_name", "last_name", "email", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "kate"], ["last_name", "sam"], ["email", "kate55@gmail.com"], ["password_digest", "[FILTERED]"], ["role", "admin"], ["created_at", "2022-08-25 20:26:01.716952"], ["updated_at", "2022-08-25 20:26:01.716952"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "lanny@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Felicitas"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.5ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Felicitas"], ["email", "lanny@hotmail.com"], ["phone_number", 946], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Schaefer and Sons"], ["first_name", "Jamel"], ["last_name", "Cremin"], ["admin_id", 12], ["employer", nil], ["created_at", "2022-08-25 20:26:03.190672"], ["updated_at", "2022-08-25 20:26:03.190672"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "fermina@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Billy"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Billy"], ["email", "fermina@hotmail.com"], ["phone_number", 380], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Goldner, Bradtke and Russel"], ["first_name", "Joan"], ["last_name", "Lesch"], ["admin_id", 12], ["employer", nil], ["created_at", "2022-08-25 20:26:03.456082"], ["updated_at", "2022-08-25 20:26:03.456082"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "guy.nolan@gmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Lenora"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Lenora"], ["email", "guy.nolan@gmail.com"], ["phone_number", 702], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "King, Terry and Cole"], ["first_name", "Winona"], ["last_name", "Doyle"], ["admin_id", 12], ["employer", nil], ["created_at", "2022-08-25 20:26:03.717156"], ["updated_at", "2022-08-25 20:26:03.717156"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "graham_larson@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Hung"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Hung"], ["email", "graham_larson@yahoo.com"], ["phone_number", 526], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Cronin-Grady"], ["first_name", "Mara"], ["last_name", "Borer"], ["admin_id", 12], ["employer", nil], ["created_at", "2022-08-25 20:26:03.974702"], ["updated_at", "2022-08-25 20:26:03.974702"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "leigha.friesen@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Willie"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Willie"], ["email", "leigha.friesen@hotmail.com"], ["phone_number", 0], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Keebler, Strosin and Ullrich"], ["first_name", "Jeraldine"], ["last_name", "Rogahn"], ["admin_id", 12], ["employer", nil], ["created_at", "2022-08-25 20:26:04.232548"], ["updated_at", "2022-08-25 20:26:04.232548"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "gabrielle@gmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Piper"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.2ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Piper"], ["email", "gabrielle@gmail.com"], ["phone_number", 987], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Hand-Schultz"], ["first_name", "Milo"], ["last_name", "O'Kon"], ["admin_id", 12], ["employer", nil], ["created_at", "2022-08-25 20:26:04.494077"], ["updated_at", "2022-08-25 20:26:04.494077"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "modesto.botsford@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Duncan"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Duncan"], ["email", "modesto.botsford@yahoo.com"], ["phone_number", 1], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Gusikowski, Greenfelder and Anderson"], ["first_name", "Luther"], ["last_name", "Hane"], ["admin_id", 12], ["employer", nil], ["created_at", "2022-08-25 20:26:04.753951"], ["updated_at", "2022-08-25 20:26:04.753951"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "bennie@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Nicholle"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Nicholle"], ["email", "bennie@yahoo.com"], ["phone_number", 800], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Harris LLC"], ["first_name", "Sylvester"], ["last_name", "Corkery"], ["admin_id", 12], ["employer", nil], ["created_at", "2022-08-25 20:26:05.012292"], ["updated_at", "2022-08-25 20:26:05.012292"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "elin@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Lanny"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Lanny"], ["email", "elin@hotmail.com"], ["phone_number", 767], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Dibbert LLC"], ["first_name", "Gerda"], ["last_name", "Cummings"], ["admin_id", 12], ["employer", nil], ["created_at", "2022-08-25 20:26:05.269969"], ["updated_at", "2022-08-25 20:26:05.269969"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "giuseppe@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Jasmine"], ["LIMIT", 1]]
+  [1m[36mEmployer Create (0.2ms)[0m  [1m[32mINSERT INTO "employers" ("user_name", "email", "phone_number", "password_digest", "role", "subscription", "company_name", "first_name", "last_name", "admin_id", "employer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["user_name", "Jasmine"], ["email", "giuseppe@hotmail.com"], ["phone_number", 764], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["subscription", false], ["company_name", "Mertz-Kohler"], ["first_name", "Anibal"], ["last_name", "Hirthe"], ["admin_id", 12], ["employer", nil], ["created_at", "2022-08-25 20:26:05.528061"], ["updated_at", "2022-08-25 20:26:05.528061"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployer Load (0.2ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Amos Braun Jr."], ["LIMIT", 1]]
+  [1m[36mJobSeeker Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "ayana_rodriguez@treutel.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "kate@gmail.com"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("first_name", "last_name", "email", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "kate"], ["last_name", "sam"], ["email", "kate@gmail.com"], ["password_digest", "[FILTERED]"], ["role", "Admin"], ["created_at", "2022-08-25 20:28:00.117511"], ["updated_at", "2022-08-25 20:28:00.117511"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "larissa@gmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployer Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "Carson"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m

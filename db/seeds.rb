@@ -8,7 +8,8 @@
 
 require 'faker'
 
-puts "Seeding data..."
+puts "🌱 Seeding data..."
+
 
 Admin.create!(
     first_name: "kate", 
@@ -33,9 +34,18 @@ Employer.create!(
 )
 end
 
+10.times do
+  JobSeeker.create!(
+    first_name: Faker::Name.name,
+    last_name: Faker::Name.name,
+    user_name: Faker::Name.unique.name,
+    email: Faker::Internet.email,
+    phone_number: Faker::PhoneNumber.phone_number,
+    password: Faker::Alphanumeric.alphanumeric(number: 10),
+    role: "Job seeker",
+    admin_id: 1
+    )
+
+end
 
 puts "Done seeding!"
-
-
-
-
