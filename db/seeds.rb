@@ -5,10 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
 require 'faker'
 
+puts "🌱 Seeding data..."
 
-puts "🌱 Seeding spices..."
 
 Admin.create!(
     first_name: "kate", 
@@ -19,18 +20,18 @@ Admin.create!(
 )
 
 10.times do
-  Employer.create!(
-      user_name: Faker::Name.unique.first_name,
-      email: Faker::Internet.free_email,
-      phone_number: Faker::PhoneNumber.phone_number,
-      role: "Employer",
-      subscription: false,
-      company_name: Faker::Company.name,
-      first_name: Faker::Name.unique.first_name,
-      last_name: Faker::Name.unique.last_name,
-      password: "ari123456",
-      admin_id: 1
-        )
+Employer.create!(
+    user_name: Faker::Name.unique.first_name,
+    email: Faker::Internet.free_email,
+    phone_number: Faker::PhoneNumber.phone_number,
+    role: "Employer",
+    subscription: false,
+    company_name: Faker::Company.name,
+    first_name: Faker::Name.unique.first_name,
+    last_name: Faker::Name.unique.last_name,
+    password: "ari123456",
+    admin_id: 1
+)
 end
 
 10.times do
@@ -38,7 +39,7 @@ end
     first_name: Faker::Name.name,
     last_name: Faker::Name.name,
     user_name: Faker::Name.unique.name,
-    email: Faker::Internet.email,
+    email: Faker::Internet.free_email,
     phone_number: Faker::PhoneNumber.phone_number,
     password: Faker::Alphanumeric.alphanumeric(number: 10),
     role: "Job seeker",
