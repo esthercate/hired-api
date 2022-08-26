@@ -3,7 +3,7 @@ class JobSeeker < ApplicationRecord
 
   has_one :profile, dependent: :destroy
 
-  belongs_to :employer
+  belongs_to :employer, optional: true
 
   validates :first_name, :last_name, presence: true
   validates :user_name, :email, uniqueness: true
