@@ -997,3 +997,61 @@ Processing by EmployersController#index as HTML
 Completed 200 OK in 82ms (Views: 48.6ms | ActiveRecord: 25.0ms | Allocations: 21206)
 
 
+Started GET "/" for 127.0.0.1 at 2022-08-26 11:37:40 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/esther/.rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.3ms | Allocations: 626)
+Completed 200 OK in 49ms (Views: 31.8ms | ActiveRecord: 0.0ms | Allocations: 3339)
+
+
+Started GET "/admins" for 127.0.0.1 at 2022-08-26 11:37:44 +0300
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (15.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mEmployer Load (4.2ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."admin_id" = $1[0m  [["admin_id", 23]]
+[active_model_serializers]   ↳ app/controllers/admins_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (96.5ms)
+Completed 200 OK in 299ms (Views: 230.3ms | ActiveRecord: 36.7ms | Allocations: 23224)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-26 11:37:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/employers" for 127.0.0.1 at 2022-08-26 11:37:51 +0300
+Processing by EmployersController#index as HTML
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJobSeeker Load (4.2ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."employer_id" = $1[0m  [["employer_id", 21]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJobSeeker Load (0.5ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."employer_id" = $1[0m  [["employer_id", 22]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJobSeeker Load (1.6ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."employer_id" = $1[0m  [["employer_id", 23]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJobSeeker Load (5.8ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."employer_id" = $1[0m  [["employer_id", 24]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJobSeeker Load (0.7ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."employer_id" = $1[0m  [["employer_id", 25]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJobSeeker Load (0.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."employer_id" = $1[0m  [["employer_id", 26]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJobSeeker Load (0.8ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."employer_id" = $1[0m  [["employer_id", 27]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJobSeeker Load (1.1ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."employer_id" = $1[0m  [["employer_id", 28]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJobSeeker Load (1.8ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."employer_id" = $1[0m  [["employer_id", 29]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJobSeeker Load (1.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."employer_id" = $1[0m  [["employer_id", 30]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (71.16ms)
+Completed 200 OK in 124ms (Views: 85.5ms | ActiveRecord: 38.6ms | Allocations: 20989)
+
+
+Started GET "/job_seekers" for 127.0.0.1 at 2022-08-26 11:38:12 +0300
+Processing by JobSeekersController#index as HTML
+  [1m[36mJobSeeker Load (4.2ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" ORDER BY "job_seekers"."id" DESC[0m
+  ↳ app/controllers/job_seekers_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 41ms (Views: 2.1ms | ActiveRecord: 4.2ms | Allocations: 843)
+
+
