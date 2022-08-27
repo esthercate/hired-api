@@ -33,6 +33,6 @@ class JobSeekersController < ApplicationController
   end
 
   def seeker_params
-    params.permit(:first_name, :last_name, :user_name, :email, :phone_number, :password, :role, :admin_id, :employer_id)
+    params.permit(:first_name, :last_name, :user_name, :email, :phone_number, :password, :role, :admin_id, :employer_id, :verified)
   end
 end
