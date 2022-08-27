@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get '/auth', to: 'users#show'
   delete '/logout', to: 'sessions#destroy'
+  post "/mpesa_callback", to: "employers#mpesa_callback"
 
 
   # Defines the root path route ("/")
