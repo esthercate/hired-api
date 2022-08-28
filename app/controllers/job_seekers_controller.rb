@@ -9,11 +9,12 @@ class JobSeekersController < ApplicationController
   
   def create
     seeker = JobSeeker.create!(seeker_params)
+    session[:user_id] = seeker.id
     render json: seeker, status: :accepted
   end
 
   def show
-    current_seeker = JobSeeker.find(session[:job_seeker_id])
+    current_seeker = JobSeeker.find(session[:user_id])
     render json: current_seeker, status: :ok
   end
 
@@ -32,6 +33,6 @@ class JobSeekersController < ApplicationController
   end
 
   def seeker_params
-    params.permit(:first_name, :last_name, :user_name, :email, :phone_number, :password, :role, :admin_id, :employer_id)
+    params.permit(:first_name, :last_name, :user_name, :email, :phone_number, :password, :role, :admin_id, :employer_id, :verified)
   end
 end
