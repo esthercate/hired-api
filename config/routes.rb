@@ -12,6 +12,10 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
 
+  #mpesa payment routes
+  resources :payments
+
+
   # Defines the root path route ("/")
   # root "articles#index"
 end
