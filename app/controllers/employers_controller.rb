@@ -12,9 +12,15 @@ class EmployersController < ApplicationController
     end
 
     def create 
-        @user = Employer.create!(employer_params)
+        employer = Employer.create!(employer_params)
         session[:user_id] = employer.id
         render json: employer, status: :created
+    end
+
+    def destroy
+        employer = Employer.find_by(id: params[:id])
+        employer.destroy
+        render json: {}, status: :no_content
     end
 
     # mpesa code

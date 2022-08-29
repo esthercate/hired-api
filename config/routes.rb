@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :employers, only: [:create, :index, :show]
+  resources :employers, only: [:create, :index, :show, :destroy]
   resources :admins, only:[:create, :index, :show]
 
   resources :profiles, only: [:create, :show, :update]
@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   post '/login', to: 'sessions#create'
+   delete '/logout', to: 'sessions#destroy'
+
   get '/auth', to: 'users#show'
-  delete '/logout', to: 'sessions#destroy'
+
   post '/mpesa_callback', to: 'employers#mpesa_callback'
   get '/mpesa_index', to: 'employers#mpesa_index'
 
