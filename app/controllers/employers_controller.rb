@@ -30,8 +30,8 @@ class EmployersController < ApplicationController
         https.use_ssl = true
        
         request = Net::HTTP::Post.new(url)
-        request["Content-Type"] = "application/json"
         request["Authorization"] = "Bearer #{token}"
+        request["Content-Type"] = "application/json"
         password = Base64.strict_encode64("BUSINESS_SHORT_CODE+PASS_KEY#{Time.now.strftime "%Y%m%d%H%M%S"}")
 
         request.body = {
@@ -73,7 +73,7 @@ class EmployersController < ApplicationController
         https.use_ssl = true
        
         request = Net::HTTP::Get.new(url)
-        enc = Base64.strict_encode64('CONSUMER_KEY:SECRET_KEY')
+        enc = Base64.strict_encode64('GQURzRWARSNHgtjnzs2JbbnYn4XdA2Cz:pavEGKI5l8G7KUrY')
         request["Authorization"] = "Basic #{enc}"
         response = https.request(request)
 

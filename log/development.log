@@ -2554,3 +2554,219 @@ JSON::ParserError (783: unexpected token at ''):
   
 app/controllers/employers_controller.rb:80:in `get_access_token'
 app/controllers/employers_controller.rb:24:in `mpesa_index'
+Started GET "/" for 127.0.0.1 at 2022-08-28 19:36:10 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.6ms | Allocations: 619)
+Completed 200 OK in 15ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 3294)
+
+
+Started GET "/" for ::1 at 2022-08-28 19:36:30 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 368)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1085)
+
+
+Started GET "/mpesa_callback" for 127.0.0.1 at 2022-08-28 19:37:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/mpesa_callback"):
+  
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-28 19:37:36 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 500 Internal Server Error in 6224ms (ActiveRecord: 0.0ms | Allocations: 843)
+
+
+  
+JSON::ParserError (783: unexpected token at ''):
+  
+app/controllers/employers_controller.rb:80:in `get_access_token'
+app/controllers/employers_controller.rb:24:in `mpesa_index'
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-28 20:28:14 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 500 Internal Server Error in 2255ms (Allocations: 2618)
+
+
+  
+NameError (undefined local variable or method `data' for #<EmployersController:0x0000000000b018>):
+  
+app/controllers/employers_controller.rb:81:in `get_access_token'
+app/controllers/employers_controller.rb:24:in `mpesa_index'
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-28 20:28:30 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 200 OK in 3334ms (Views: 0.9ms | Allocations: 1828)
+
+
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-28 20:30:19 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 500 Internal Server Error in 1453ms (Allocations: 740)
+
+
+  
+JSON::ParserError (783: unexpected token at ''):
+  
+app/controllers/employers_controller.rb:80:in `get_access_token'
+app/controllers/employers_controller.rb:24:in `mpesa_index'
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-28 20:32:59 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 500 Internal Server Error in 1542ms (Allocations: 1262)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/employers_controller.rb:81:in `get_access_token'
+app/controllers/employers_controller.rb:24:in `mpesa_index'
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-28 20:33:26 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 200 OK in 3000ms (Views: 0.8ms | Allocations: 1791)
+
+
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-28 20:42:34 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 500 Internal Server Error in 1611ms (Allocations: 747)
+
+
+  
+JSON::ParserError (783: unexpected token at ''):
+  
+app/controllers/employers_controller.rb:80:in `get_access_token'
+app/controllers/employers_controller.rb:24:in `mpesa_index'
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-28 20:45:43 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 500 Internal Server Error in 1399ms (Allocations: 764)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/employers_controller.rb:81:in `[]'
+app/controllers/employers_controller.rb:81:in `get_access_token'
+app/controllers/employers_controller.rb:24:in `mpesa_index'
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-28 20:46:05 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 200 OK in 2671ms (Views: 0.8ms | Allocations: 1784)
+
+
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-28 20:46:21 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 500 Internal Server Error in 1672ms (Allocations: 756)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/employers_controller.rb:81:in `[]'
+app/controllers/employers_controller.rb:81:in `get_access_token'
+app/controllers/employers_controller.rb:24:in `mpesa_index'
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-28 20:46:59 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 500 Internal Server Error in 10009ms (Allocations: 233)
+
+
+  
+SocketError (Failed to open TCP connection to sandbox.safaricom.co.ke:443 (getaddrinfo: Temporary failure in name resolution)):
+  
+app/controllers/employers_controller.rb:78:in `get_access_token'
+app/controllers/employers_controller.rb:24:in `mpesa_index'
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-28 20:54:07 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 500 Internal Server Error in 10011ms (Allocations: 241)
+
+
+  
+SocketError (Failed to open TCP connection to sandbox.safaricom.co.ke:443 (getaddrinfo: Temporary failure in name resolution)):
+  
+app/controllers/employers_controller.rb:78:in `get_access_token'
+app/controllers/employers_controller.rb:24:in `mpesa_index'
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-28 20:54:35 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 500 Internal Server Error in 2096ms (Allocations: 767)
+
+
+  
+JSON::ParserError (783: unexpected token at ''):
+  
+app/controllers/employers_controller.rb:80:in `get_access_token'
+app/controllers/employers_controller.rb:24:in `mpesa_index'
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-28 20:58:44 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 500 Internal Server Error in 4158ms (Allocations: 756)
+
+
+  
+JSON::ParserError (783: unexpected token at ''):
+  
+app/controllers/employers_controller.rb:80:in `get_access_token'
+app/controllers/employers_controller.rb:24:in `mpesa_index'
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-28 20:59:14 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 500 Internal Server Error in 4854ms (Allocations: 759)
+
+
+  
+JSON::ParserError (783: unexpected token at ''):
+  
+app/controllers/employers_controller.rb:80:in `get_access_token'
+app/controllers/employers_controller.rb:24:in `mpesa_index'
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-29 09:28:34 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmployersController#mpesa_index as HTML
+Completed 500 Internal Server Error in 7327ms (ActiveRecord: 0.0ms | Allocations: 16145)
+
+
+  
+JSON::ParserError (783: unexpected token at ''):
+  
+app/controllers/employers_controller.rb:80:in `get_access_token'
+app/controllers/employers_controller.rb:24:in `mpesa_index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-29 09:28:42 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-29 09:29:39 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 500 Internal Server Error in 4275ms (ActiveRecord: 0.0ms | Allocations: 748)
+
+
+  
+JSON::ParserError (783: unexpected token at ''):
+  
+app/controllers/employers_controller.rb:80:in `get_access_token'
+app/controllers/employers_controller.rb:24:in `mpesa_index'
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-29 09:29:56 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 500 Internal Server Error in 8490ms (ActiveRecord: 0.0ms | Allocations: 764)
+
+
+  
+JSON::ParserError (783: unexpected token at ''):
+  
+app/controllers/employers_controller.rb:80:in `get_access_token'
+app/controllers/employers_controller.rb:24:in `mpesa_index'
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-29 09:32:22 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 200 OK in 16422ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 1877)
+
+
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-29 09:33:24 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 500 Internal Server Error in 7124ms (ActiveRecord: 0.0ms | Allocations: 755)
+
+
+  
+JSON::ParserError (783: unexpected token at ''):
+  
+app/controllers/employers_controller.rb:80:in `get_access_token'
+app/controllers/employers_controller.rb:24:in `mpesa_index'
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-29 09:38:35 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 200 OK in 9062ms (Views: 0.8ms | Allocations: 1867)
+
+
+Started GET "/mpesa_index" for 127.0.0.1 at 2022-08-29 09:45:09 +0300
+Processing by EmployersController#mpesa_index as HTML
+Completed 200 OK in 7270ms (Views: 0.9ms | Allocations: 1854)
+
+
