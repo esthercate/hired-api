@@ -9,5 +9,5 @@ class Employer < ApplicationRecord
     validates :email, :user_name, uniqueness: true
     validates :password, length: {in: 6...20}
     #validates :phone_number, length: {in: 9...13}
-
+    
 end
