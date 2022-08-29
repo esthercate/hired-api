@@ -46,3 +46,5 @@ end
 
 
 gem "mpesarb", "~> 0.3.4"
+
+gem "jwt", "~> 2.5"
