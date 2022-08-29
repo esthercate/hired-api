@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
 
   #mpesa payment routes
-  resources :payments
+  #resources :payments
 
 
   # Defines the root path route ("/")
