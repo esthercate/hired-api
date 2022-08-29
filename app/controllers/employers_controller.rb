@@ -17,6 +17,11 @@ class EmployersController < ApplicationController
         render json: employer, status: :created
     end
 
+    def show
+    current_employer = Employer.find(session[:user_id])
+    render json: current_employer, status: :ok
+  end
+
     def destroy
         employer = Employer.find_by(id: params[:id])
         employer.destroy

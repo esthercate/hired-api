@@ -14,6 +14,8 @@ gem "puma", "~> 5.0"
 
 gem "bcrypt"
 
+gem 'securerandom'
+
 gem 'active_model_serializers'
 
 gem 'aws-sdk-s3', '~> 1.114'

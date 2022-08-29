@@ -7,10 +7,13 @@ Rails.application.routes.draw do
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  post '/login', to: 'sessions#create'
-   delete '/logout', to: 'sessions#destroy'
+  #post '/login', to: 'sessions#create'
+  post '/signup', to: 'sessions#signup'
+  post '/signup', to: 'sessions#signup'
 
-  get '/auth', to: 'users#show'
+  delete '/logout', to: 'sessions#destroy'
+
+  #get '/auth', to: 'users#show'
 
   post '/mpesa_callback', to: 'employers#mpesa_callback'
   get '/mpesa_index', to: 'employers#mpesa_index'
