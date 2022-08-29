@@ -18,6 +18,7 @@ class AdminsController < ApplicationController
    
     def create 
         admin = Admin.create!(admin_params)
+        session[:user_id] = admin.id
         render json: admin, status: :created
     end
 
