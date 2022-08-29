@@ -12,7 +12,7 @@ class EmployersController < ApplicationController
     end
 
     def create 
-        @employer = Employer.create!(employer_params)
+        @user = Employer.create!(employer_params)
         session[:user_id] = employer.id
         render json: employer, status: :created
     end
