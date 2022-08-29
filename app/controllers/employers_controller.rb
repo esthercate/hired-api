@@ -43,7 +43,7 @@ class EmployersController < ApplicationController
             "PartyA": 254710361878,
             "PartyB": 174379,
             "PhoneNumber": 254710361878,
-            "CallBackURL": "http://[::1]:3000/mpesa_callback",
+            "CallBackURL": "https://hired-app-api.herokuapp.com/mpesa_callback",
             "AccountReference": "Hired LTD",
             "TransactionDesc": "Payment of subscription" 
         }.to_json
