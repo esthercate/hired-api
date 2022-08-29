@@ -32,7 +32,7 @@ class EmployersController < ApplicationController
         request = Net::HTTP::Post.new(url)
         request["Authorization"] = "Bearer #{token}"
         request["Content-Type"] = "application/json"
-        password = Base64.strict_encode64("174379+bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919#{Time.now.strftime "%Y%m%d%H%M%S"}")
+        password = Base64.strict_encode64("174379bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919#{Time.now.strftime "%Y%m%d%H%M%S"}")
 
         request.body = {
             "BusinessShortCode": 174379,
