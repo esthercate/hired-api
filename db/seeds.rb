@@ -22,11 +22,11 @@ Admin.create!(
 10.times do
 Employer.create!(
     user_name: Faker::Name.unique.first_name,
-    email: Faker::Internet.free_email[10..15],
+    email: Faker::Internet.free_email[0..14],
     phone_number: Faker::PhoneNumber.phone_number,
     role: "Employer",
     subscription: false,
-    company_name: Faker::Company.name[5..8],
+    company_name: Faker::Company.name[0..10],
     first_name: Faker::Name.unique.first_name,
     last_name: Faker::Name.unique.last_name,
     password: "ari123456",
@@ -39,7 +39,7 @@ end
     first_name: Faker::Name.name,
     last_name: Faker::Name.name,
     user_name: Faker::Name.unique.name,
-    email: Faker::Internet.free_email[10..15],
+    email: Faker::Internet.free_email[0..14],
     phone_number: Faker::PhoneNumber.phone_number,
     password: Faker::Alphanumeric.alphanumeric(number: 10),
     role: "Job seeker",
