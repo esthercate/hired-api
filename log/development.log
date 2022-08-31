@@ -2812,3 +2812,95 @@ Processing by EmployersController#mpesa_index as HTML
 Completed 200 OK in 8938ms (Views: 0.4ms | Allocations: 1752)
 
 
+Started GET "/" for 127.0.0.1 at 2022-08-29 12:25:42 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.8ms | Allocations: 619)
+Completed 200 OK in 18ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 3294)
+
+
+Started GET "/ws" for ::1 at 2022-08-29 12:25:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started POST "/job_seekers" for ::1 at 2022-08-29 12:27:14 +0300
+Processing by JobSeekersController#create as JSON
+  Parameters: {"user_name"=>"hinga", "first_name"=>"Samuel", "last_name"=>"Hinga", "email"=>"samuelkinuthia420@gmail.com", "role"=>"jobseeker", "password"=>"[FILTERED]", "admin_id"=>1, "confirm_password"=>"[FILTERED]"}
+[31mUnpermitted parameter: :confirm_password. Context: { controller: JobSeekersController, action: create, request: #<ActionDispatch::Request:0x00007f701886f148>, params: {"user_name"=>"hinga", "first_name"=>"Samuel", "last_name"=>"Hinga", "email"=>"samuelkinuthia420@gmail.com", "role"=>"jobseeker", "password"=>"[FILTERED]", "admin_id"=>1, "confirm_password"=>"[FILTERED]", "controller"=>"job_seekers", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."user_name" = $1 LIMIT $2[0m  [["user_name", "hinga"], ["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "samuelkinuthia420@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mJobSeeker Create (3.5ms)[0m  [1m[32mINSERT INTO "job_seekers" ("first_name", "last_name", "user_name", "email", "phone_number", "password_digest", "role", "admin_id", "employer_id", "created_at", "updated_at", "verified") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["first_name", "Samuel"], ["last_name", "Hinga"], ["user_name", "hinga"], ["email", "samuelkinuthia420@gmail.com"], ["phone_number", nil], ["password_digest", "[FILTERED]"], ["role", "jobseeker"], ["admin_id", 1], ["employer_id", nil], ["created_at", "2022-08-29 09:27:14.867588"], ["updated_at", "2022-08-29 09:27:14.867588"], ["verified", nil]]
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/job_seekers_controller.rb:11:in `create'
+[active_model_serializers]   [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."job_seeker_id" = $1 LIMIT $2[0m  [["job_seeker_id", 32], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/job_seekers_controller.rb:13:in `create'
+[active_model_serializers] Rendered JobSeekerSerializer with ActiveModelSerializers::Adapter::Attributes (26.0ms)
+Completed 202 Accepted in 381ms (Views: 44.0ms | ActiveRecord: 38.1ms | Allocations: 30497)
+
+
+Started POST "/login" for ::1 at 2022-08-31 09:28:33 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"samuelkinuthia420@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"samuelkinuthia420@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "samuelkinuthia420@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15:in `create'
+  [1m[36mEmployer Load (2.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."email" = $1 LIMIT $2[0m  [["email", "samuelkinuthia420@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:17:in `create'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers" WHERE "employers"."user_name" = $1 LIMIT $2[0m  [["user_name", "samuelkinuthia420@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:17:in `create'
+  [1m[36mJobSeeker Load (1.3ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "samuelkinuthia420@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+  [1m[36mCACHE JobSeeker Load (0.0ms)[0m  [1m[34mSELECT "job_seekers".* FROM "job_seekers" WHERE "job_seekers"."email" = $1 LIMIT $2[0m  [["email", "samuelkinuthia420@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:20:in `create'
+[active_model_serializers]   [1m[36mProfile Load (0.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."job_seeker_id" = $1 LIMIT $2[0m  [["job_seeker_id", 32], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:25:in `create'
+[active_model_serializers] Rendered JobSeekerSerializer with ActiveModelSerializers::Adapter::Attributes (25.37ms)
+Completed 201 Created in 370ms (Views: 40.0ms | ActiveRecord: 19.6ms | Allocations: 49955)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-31 09:34:38 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.8ms | Allocations: 619)
+Completed 200 OK in 21ms (Views: 9.8ms | Allocations: 3284)
+
+
+Started POST "/mpesa_index" for 127.0.0.1 at 2022-08-31 09:35:29 +0300
+Processing by EmployersController#mpesa_index as */*
+  Parameters: {"phone_number"=>254710361878}
+Completed 200 OK in 3821ms (Views: 0.8ms | Allocations: 1984)
+
+
+Started POST "/mpesa_index" for 127.0.0.1 at 2022-08-31 09:36:23 +0300
+Processing by EmployersController#mpesa_index as */*
+  Parameters: {"phone_number"=>254710361878}
+Completed 200 OK in 7355ms (Views: 0.8ms | Allocations: 1923)
+
+
+Started POST "/mpesa_index" for 127.0.0.1 at 2022-08-31 09:36:50 +0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+        "phone_number": 0710361878
+}
+Processing by EmployersController#mpesa_index as */*
+Completed 400 Bad Request in 1442ms (Allocations: 924)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/employers_controller.rb:43:in `mpesa_index'
+Started POST "/mpesa_index" for 127.0.0.1 at 2022-08-31 09:36:59 +0300
+Processing by EmployersController#mpesa_index as */*
+  Parameters: {"phone_number"=>710361878}
+Completed 200 OK in 11150ms (Views: 0.5ms | Allocations: 1830)
+
+
