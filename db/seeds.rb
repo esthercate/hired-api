@@ -11,13 +11,13 @@ require 'faker'
 puts "🌱 Seeding data..."
 
 
-#Admin.create!(
-#    first_name: "kate", 
-#    last_name: "sam", 
-#    email: "kate@gmail.com",
-#    role: "admin",
-#    password: "kate123456"
-#)
+Admin.create!(
+    first_name: "kate", 
+    last_name: "sam", 
+    email: "kate@gmail.com",
+    role: "admin",
+    password: "kate123456"
+)
 
 10.times do
 Employer.create!(
