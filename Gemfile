@@ -14,6 +14,8 @@ gem "puma", "~> 5.0"
 
 gem "bcrypt"
 
+gem 'securerandom'
+
 gem 'active_model_serializers'
 
 gem 'aws-sdk-s3', '~> 1.114'
@@ -44,3 +46,7 @@ group :development do
   gem "spring"
 end
 
+
+gem "mpesarb", "~> 0.3.4"
+
+gem "jwt", "~> 2.5"

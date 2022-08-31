@@ -1,10 +1,10 @@
 class AdminsController < ApplicationController
-     wrap_parameters format: []
-  rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
+    wrap_parameters format: []
+    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
     def index 
         admins = Admin.all 
-        render json: admins
+        render json: admins, status: :ok
     end
 
     def show 

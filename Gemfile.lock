@@ -108,6 +108,10 @@ GEM
     digest (3.1.0)
     erubi (1.11.0)
     eventmachine (1.2.7)
+    faraday (2.5.2)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.0)
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -121,6 +125,7 @@ GEM
       reline (>= 0.3.0)
     jmespath (1.6.1)
     jsonapi-renderer (0.2.2)
+    jwt (2.5.0)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -130,7 +135,12 @@ GEM
     method_source (1.0.0)
     mini_magick (4.11.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.0)
     minitest (5.16.3)
+    mpesarb (0.3.4)
+      activesupport (>= 5.0.0)
+      faraday (>= 2.0.1)
+      openssl (>= 2.1)
     net-imap (0.2.3)
       digest
       net-protocol
@@ -146,12 +156,11 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.8)
-      mini_portile2 (~> 2.8.0)
-      racc (~> 1.4)
+<<<<<<<<< Temporary merge branch 1
     nokogiri (1.13.8-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.13.8-x86_64-linux)
+>>>>>>>>> Temporary merge branch 2
       racc (~> 1.4)
     pg (1.4.3)
     puma (5.6.5)
@@ -193,6 +202,8 @@ GEM
       io-console (~> 0.5)
     ruby-vips (2.1.4)
       ffi (~> 1.12)
+    ruby2_keywords (0.0.5)
+    securerandom (0.2.0)
     spring (4.0.0)
     strscan (3.0.4)
     thin (1.8.1)
@@ -220,10 +231,13 @@ DEPENDENCIES
   debug
   faker!
   image_processing (~> 1.2)
+  jwt (~> 2.5)
+  mpesarb (~> 0.3.4)
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.3, >= 7.0.3.1)
+  securerandom
   spring
   thin
   tzinfo-data
