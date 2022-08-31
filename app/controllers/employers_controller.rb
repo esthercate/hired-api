@@ -46,9 +46,9 @@ class EmployersController < ApplicationController
             "Timestamp": "#{Time.now.strftime "%Y%m%d%H%M%S"}",
             "TransactionType": "CustomerPayBillOnline",
             "Amount": 100,
-            "PartyA": params.permit(:phone_number),
+            "PartyA": params[:phone_number],
             "PartyB": 174379,
-            "PhoneNumber": params.permit(:phone_number),
+            "PhoneNumber": params[:phone_number],
             "CallBackURL": "https://hired-app-api.herokuapp.com/mpesa_callback",
             "AccountReference": "Hired LTD",
             "TransactionDesc": "Payment of subscription" 
