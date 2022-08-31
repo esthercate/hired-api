@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   #post '/login', to: 'sessions#create'
   post '/signup', to: 'sessions#signup'
-  post '/signup', to: 'sessions#signup'
+  post '/login', to: 'sessions#create'
 
   delete '/logout', to: 'sessions#destroy'
 
