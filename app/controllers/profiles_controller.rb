@@ -32,11 +32,11 @@ class ProfilesController < ApplicationController
   end
 
   def profile_params
-    params.permit(:about_me, :description, :job_seeker_id, :experience_years, :salary_expectation, :image, :resume)
+    params.permit(:about_me, :description, :job_seeker_id, :experience_years, :salary_expectation, :image, :resume, :availability)
   end
 
   def update_params
-    params.permit(:about_me, :description, :job_seeker_id, :experience_years, :salary_expectation, :image, :resume)
+    params.permit(:about_me, :description, :job_seeker_id, :experience_years, :salary_expectation, :image, :resume, :availability)
   end
 
 end
