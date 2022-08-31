@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/auth', to: 'users#show'
 
   post '/mpesa_callback', to: 'employers#mpesa_callback'
-  get '/mpesa_index', to: 'employers#mpesa_index'
+  post '/mpesa_index', to: 'employers#mpesa_index'
 
 
   #mpesa payment routes

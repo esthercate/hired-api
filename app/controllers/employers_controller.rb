@@ -45,10 +45,10 @@ class EmployersController < ApplicationController
             "Password": password,
             "Timestamp": "#{Time.now.strftime "%Y%m%d%H%M%S"}",
             "TransactionType": "CustomerPayBillOnline",
-            "Amount": 1,
-            "PartyA": 254710361878,
+            "Amount": 100,
+            "PartyA": params.permit(:phone_number),
             "PartyB": 174379,
-            "PhoneNumber": 254710361878,
+            "PhoneNumber": params.permit(:phone_number),
             "CallBackURL": "https://hired-app-api.herokuapp.com/mpesa_callback",
             "AccountReference": "Hired LTD",
             "TransactionDesc": "Payment of subscription" 
@@ -71,6 +71,10 @@ class EmployersController < ApplicationController
     def employer_params 
         params.permit(:user_name, :email, :phone_number, :role, :subscription, :company_name, :first_name, :last_name, :password, :admin_id)
     end
+
+    # def mpesa_params
+    #     params.permit(:phone_number)
+    # end
 
     def get_access_token
         url = URI("https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials")
