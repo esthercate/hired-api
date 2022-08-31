@@ -16,10 +16,6 @@ Rails.application.routes.draw do
   post '/mpesa_index', to: 'employers#mpesa_index'
 
 
-  #mpesa payment routes
-  #resources :payments
-
-
   # Defines the root path route ("/")
   # root "articles#index"
 end
