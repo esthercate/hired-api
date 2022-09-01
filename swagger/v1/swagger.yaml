@@ -1,0 +1,393 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/admins":
+    get:
+      summary: list admins
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create admin
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+                email:
+                  type: string
+                role:
+                  type: string
+              required:
+              - first_name
+              - last_name
+              - email
+              - role
+  "/admins/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show admin
+      responses:
+        '200':
+          description: successful
+  "/employers":
+    get:
+      summary: list employers
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create employer
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_name:
+                  type: string
+                email:
+                  type: string
+                phone_number:
+                  type: integer
+                role:
+                  type: string
+                subscription:
+                  type: boolean
+                company_name:
+                  type: string
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+                admin_id:
+                  type: integer
+              required:
+              - user_name
+              - email
+              - phone_number
+              - role
+              - subscription
+              - company_name
+              - first_name
+              - last_name
+              - admin_id
+  "/employers/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show employer
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update employer
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_name:
+                  type: string
+                email:
+                  type: string
+                phone_number:
+                  type: integer
+                company_name:
+                  type: string
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+              required:
+              - user_name
+              - email
+              - phone_number
+              - company_name
+              - first_name
+              - last_name
+    put:
+      summary: update employer
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_name:
+                  type: string
+                email:
+                  type: string
+                phone_number:
+                  type: integer
+                company_name:
+                  type: string
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+              required:
+              - user_name
+              - email
+              - phone_number
+              - company_name
+              - first_name
+              - last_name
+    delete:
+      summary: delete employer
+      responses:
+        '200':
+          description: successful
+  "/mpesa_callback":
+    post:
+      summary: mpesa_callback employer
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                phone_number:
+                  type: integer
+              required:
+              - phone_number
+  "/mpesa_index":
+    post:
+      summary: mpesa_index employer
+      responses:
+        '200':
+          description: successful
+  "/job_seekers":
+    get:
+      summary: list job_seekers
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create job_seeker
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+                user_name:
+                  type: string
+                email:
+                  type: string
+                phone_number:
+                  type: integer
+                role:
+                  type: string
+                verified:
+                  type: string
+                admin_id:
+                  type: integer
+                employer_id:
+                  type: integer
+              required:
+              - first_name
+              - last_name
+              - user_name
+              - email
+              - phone_number
+              - role
+              - admin_id
+              - employer_id
+              - verified
+  "/job_seekers/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show job_seeker
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete job_seeker
+      responses:
+        '200':
+          description: successful
+  "/profiles":
+    post:
+      summary: create profile
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                about_me:
+                  type: string
+                description:
+                  type: string
+                job_seeker_id:
+                  type: integer
+                experience_years:
+                  type: integer
+                salary_expectation:
+                  type: integer
+                image:
+                  type: string
+                resume:
+                  type: string
+                availability:
+                  type: boolean
+              required:
+              - about_me
+              - description
+              - job_seeker_id
+              - experience_years
+              - salary_expectation
+              - image
+              - resume
+              - availability
+  "/profiles/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show profile
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update profile
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                about_me:
+                  type: string
+                description:
+                  type: string
+                job_seeker_id:
+                  type: integer
+                experience_years:
+                  type: integer
+                salary_expectation:
+                  type: integer
+                image:
+                  type: string
+                resume:
+                  type: string
+                availability:
+                  type: boolean
+              required:
+              - about_me
+              - description
+              - job_seeker_id
+              - experience_years
+              - salary_expectation
+              - image
+              - resume
+              - availability
+    put:
+      summary: update profile
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                about_me:
+                  type: string
+                description:
+                  type: string
+                job_seeker_id:
+                  type: integer
+                experience_years:
+                  type: integer
+                salary_expectation:
+                  type: integer
+                image:
+                  type: string
+                resume:
+                  type: string
+                availability:
+                  type: boolean
+              required:
+              - about_me
+              - description
+              - job_seeker_id
+              - experience_years
+              - salary_expectation
+              - image
+              - resume
+              - availability
+servers:
+- url: https://hired-app-api.herokuapp.com/
+  variables:
+    defaultHost:
+      default: https://hired-app-api.herokuapp.com/

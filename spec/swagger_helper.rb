@@ -24,10 +24,10 @@ RSpec.configure do |config|
       paths: {},
       servers: [
         {
-          url: 'https://{defaultHost}',
+          url: 'https://hired-app-api.herokuapp.com/',
           variables: {
             defaultHost: {
-              default: 'www.example.com'
+              default: 'https://hired-app-api.herokuapp.com/'
             }
           }
         }
