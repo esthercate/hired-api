@@ -21,6 +21,23 @@ RSpec.describe 'employers', type: :request do
     post('create employer') do
       response(200, 'successful') do
 
+        consumes 'application/json'        
+        parameter name: :schedule, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            user_name: { type: :string },            
+            email: { type: :string },  
+            phone_number: { type: :integer }, 
+            role: { type: :string },
+            subscription: { type: :boolean },  
+            company_name: { type: :string },            
+            first_name: { type: :string },  
+            last_name: { type: :string },
+            admin_id: { type: :integer }      
+          },          
+          required: %w[user_name email phone_number role subscription company_name first_name last_name admin_id]  
+        }
+
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,6 +73,20 @@ RSpec.describe 'employers', type: :request do
       response(200, 'successful') do
         let(:id) { '123' }
 
+        consumes 'application/json'        
+        parameter name: :schedule, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            user_name: { type: :string },            
+            email: { type: :string },  
+            phone_number: { type: :integer },  
+            company_name: { type: :string },            
+            first_name: { type: :string },  
+            last_name: { type: :string }    
+          },          
+          required: %w[user_name email phone_number company_name first_name last_name]  
+        }
+
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -70,6 +101,20 @@ RSpec.describe 'employers', type: :request do
     put('update employer') do
       response(200, 'successful') do
         let(:id) { '123' }
+
+        consumes 'application/json'        
+        parameter name: :schedule, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            user_name: { type: :string },            
+            email: { type: :string },  
+            phone_number: { type: :integer },  
+            company_name: { type: :string },            
+            first_name: { type: :string },  
+            last_name: { type: :string }    
+          },          
+          required: %w[user_name email phone_number company_name first_name last_name]  
+        }
 
         after do |example|
           example.metadata[:response][:content] = {
