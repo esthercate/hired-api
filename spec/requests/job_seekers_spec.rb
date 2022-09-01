@@ -21,6 +21,23 @@ RSpec.describe 'job_seekers', type: :request do
     post('create job_seeker') do
       response(200, 'successful') do
 
+        consumes 'application/json'        
+        parameter name: :schedule, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            first_name: { type: :string },            
+            last_name: { type: :string },  
+            user_name: { type: :string }, 
+            email: { type: :string },
+            phone_number: { type: :integer },  
+            role: { type: :string },            
+            verified: { type: :string },  
+            admin_id: { type: :integer }, 
+            employer_id: { type: :integer }     
+          },          
+          required: %w[first_name last_name user_name email phone_number role admin_id employer_id verified]  
+        }
+
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

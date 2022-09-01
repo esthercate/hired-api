@@ -148,6 +148,15 @@ RSpec.describe 'employers', type: :request do
     post('mpesa_callback employer') do
       response(200, 'successful') do
 
+        consumes 'application/json'        
+        parameter name: :schedule, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            phone_number: { type: :integer },      
+          },          
+          required: %w[phone_number]  
+        }
+
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
