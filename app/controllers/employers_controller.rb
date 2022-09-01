@@ -18,9 +18,15 @@ class EmployersController < ApplicationController
     end
 
     def show
-    current_employer = Employer.find(session[:user_id])
-    render json: current_employer, status: :ok
-  end
+        current_employer = Employer.find(session[:user_id])
+        render json: current_employer, status: :ok
+    end
+
+    def update
+        employer = Employer.find(params[:id])
+        employer.update(employer_params)
+        render json: employer, status: :ok
+     end
 
     def destroy
         employer = Employer.find_by(id: params[:id])

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :employers, only: [:create, :index, :show, :destroy]
+  resources :employers, only: [:create, :index, :show, :update, :destroy]
   resources :admins, only:[:create, :index, :show]
 
   resources :profiles, only: [:create, :show, :update]

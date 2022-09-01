@@ -22,9 +22,6 @@ class ProfilesController < ApplicationController
     render json: profile, status: :ok
   end
 
-
-
-
   private
 
   def render_unprocessable_entity(invalid)
