@@ -5,6 +5,8 @@ class Employer < ApplicationRecord
 
     has_many :job_seekers
 
+    has_one_attached :image, dependent: :destroy
+
     validates :role, :user_name, :company_name, :first_name, :last_name, :admin_id, presence: true
     validates :email, :user_name, uniqueness: true
     validates :password, length: {in: 1...20}
