@@ -23,7 +23,7 @@ class EmployersController < ApplicationController
 
     def update
         employer = Employer.find(params[:id])
-        employer.update(employer_params)
+        employer.update(update_params)
         render json: employer, status: :ok
      end
 
@@ -80,6 +80,10 @@ class EmployersController < ApplicationController
 
     def employer_params 
         params.permit(:user_name, :email, :phone_number, :role, :subscription, :company_name, :first_name, :last_name, :password, :admin_id)
+    end
+
+    def update_params 
+        params.permit(:user_name, :email, :phone_number, :company_name, :first_name, :last_name)
     end
 
     # def mpesa_params
