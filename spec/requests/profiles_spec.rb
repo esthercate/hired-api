@@ -7,6 +7,22 @@ RSpec.describe 'profiles', type: :request do
     post('create profile') do
       response(200, 'successful') do
 
+        consumes 'application/json'        
+        parameter name: :schedule, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            about_me: { type: :string },            
+            description: { type: :string },  
+            job_seeker_id: { type: :integer }, 
+            experience_years: { type: :integer },
+            salary_expectation: { type: :integer },   
+            image: { type: :string },            
+            resume: { type: :string }, 
+            availability: { type: :boolean }     
+          },          
+          required: %w[about_me description job_seeker_id experience_years salary_expectation image resume availability]  
+        }
+
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -42,6 +58,22 @@ RSpec.describe 'profiles', type: :request do
       response(200, 'successful') do
         let(:id) { '123' }
 
+        consumes 'application/json'        
+        parameter name: :schedule, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            about_me: { type: :string },            
+            description: { type: :string },  
+            job_seeker_id: { type: :integer }, 
+            experience_years: { type: :integer },
+            salary_expectation: { type: :integer },   
+            image: { type: :string },            
+            resume: { type: :string }, 
+            availability: { type: :boolean }     
+          },          
+          required: %w[about_me description job_seeker_id experience_years salary_expectation image resume availability]  
+        }
+
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -56,6 +88,22 @@ RSpec.describe 'profiles', type: :request do
     put('update profile') do
       response(200, 'successful') do
         let(:id) { '123' }
+
+        consumes 'application/json'        
+        parameter name: :schedule, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            about_me: { type: :string },            
+            description: { type: :string },  
+            job_seeker_id: { type: :integer }, 
+            experience_years: { type: :integer },
+            salary_expectation: { type: :integer },   
+            image: { type: :string },            
+            resume: { type: :string }, 
+            availability: { type: :boolean }     
+          },          
+          required: %w[about_me description job_seeker_id experience_years salary_expectation image resume availability]  
+        }
 
         after do |example|
           example.metadata[:response][:content] = {

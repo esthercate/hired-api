@@ -83,7 +83,7 @@ class EmployersController < ApplicationController
     end
 
     def update_params 
-        params.permit(:user_name, :email, :phone_number, :company_name, :first_name, :last_name)
+        params.permit(:user_name, :email, :phone_number, :company_name, :first_name, :image, :last_name)
     end
 
     # def mpesa_params
