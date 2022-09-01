@@ -21,6 +21,18 @@ RSpec.describe 'admins', type: :request do
     post('create admin') do
       response(200, 'successful') do
 
+        consumes 'application/json'        
+        parameter name: :schedule, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            first_name: { type: :string },            
+            last_name: { type: :string },  
+            email: { type: :string }, 
+            role: { type: :string },       
+          },          
+          required: %w[first_name last_name email role]  
+        }
+
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
