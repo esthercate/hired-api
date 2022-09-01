@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
   resources :employers, only: [:create, :index, :show, :update, :destroy]
   resources :admins, only:[:create, :index, :show]
 

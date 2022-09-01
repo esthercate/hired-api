@@ -39,6 +39,10 @@ gem "rack-cors"
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+
+  gem 'rswag-api'
+  
+  gem 'rswag-ui'
 end
 
 group :development do
@@ -50,3 +54,7 @@ end
 gem "mpesarb", "~> 0.3.4"
 
 gem "jwt", "~> 2.5"
+
+gem 'rspec-rails'
+
+gem 'rswag'

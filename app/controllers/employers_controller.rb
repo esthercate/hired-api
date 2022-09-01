@@ -13,12 +13,11 @@ class EmployersController < ApplicationController
 
     def create 
         employer = Employer.create!(employer_params)
-        session[:user_id] = employer.id
         render json: employer, status: :created
     end
 
     def show
-        current_employer = Employer.find(session[:user_id])
+        current_employer = Employer.find_by(id params[:id])
         render json: current_employer, status: :ok
     end
 
